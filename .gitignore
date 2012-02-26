@@ -1,2 +1,8 @@
 *.elc
-
+elpa/
+backups/
+swank/
+*~
+.smex-items
+places
+url/
