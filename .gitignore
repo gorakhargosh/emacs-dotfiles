@@ -7,3 +7,4 @@ swank/
 places
 url/
 hydra.el
+*.google.com.el
