@@ -31,7 +31,10 @@
 
 ;; Configuration root.
 (setq config-dir (file-name-directory (or (buffer-file-name) load-file-name)))
+
 (add-to-list 'load-path config-dir)
+(add-to-list 'load-path "~/.emacs.d/vendor/auto-complete")
+
 
 ;;; A quick & ugly PATH solution to Emacs on Mac OSX
 (if (string-equal "darwin" (symbol-name system-type))
@@ -66,14 +69,19 @@
 (require 'clojurescript-mode)
 (require 'coffee-mode)
 
-(require 'autopair)
-(autopair-global-mode)
-
 ;; Key bindings and editing.
 (require 'move-text)
 ;;(move-text-default-bindings)
 (require 'config-defuns)
 (require 'config-bindings)
 
+;; Auto-completion.
+(require 'autopair)
+(autopair-global-mode)
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/vendor/auto-complete/dict")
+(ac-config-default)
+
+;;(require 'config-completion)
 
 ;;; init.el ends here

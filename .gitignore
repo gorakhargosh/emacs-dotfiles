@@ -6,3 +6,4 @@ swank/
 .smex-items
 places
 url/
+hydra.el
