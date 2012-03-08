@@ -1,3 +1,0 @@
-[submodule "vendor/auto-complete"]
-	path = vendor/auto-complete
-	url = git@github.com:gorakhargosh/auto-complete.git
