@@ -64,6 +64,7 @@
 (add-hook 'kill-emacs-hook 'byte-compile-user-init-file t t)
 
 
+
 ;; Programming language modes.
 (require 'clojure-mode)
 (require 'clojurescript-mode)
@@ -82,6 +83,10 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/vendor/auto-complete/dict")
 (ac-config-default)
 
-;;(require 'config-completion)
+(global-auto-complete-mode t)
+;; (setq ac-auto-start 1)
+;; (setq ac-dwim 1)
+(setq ac-ignore-case 1)
+
 
 ;;; init.el ends here
