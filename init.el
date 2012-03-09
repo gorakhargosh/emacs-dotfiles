@@ -82,6 +82,9 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/vendor/auto-complete/dict")
 (ac-config-default)
 
+;; Automatically remove trailing whitespace.
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ;;(require 'config-completion)
 
 ;;; init.el ends here
