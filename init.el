@@ -88,5 +88,7 @@
 ;; (setq ac-dwim 1)
 (setq ac-ignore-case 1)
 
+;; Automatically remove trailing whitespace.
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;;; init.el ends here
