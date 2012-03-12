@@ -18,7 +18,7 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar my-packages '(elisp-cache starter-kit starter-kit-lisp starter-kit-bindings starter-kit-js starter-kit-eshell autopair anything anything-complete anything-extension anything-config clojure-mode clojurescript-mode coffee-mode go-mode haskell-mode move-text) "A list of packages to ensure that are installed at launch.")
+(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-bindings starter-kit-js starter-kit-eshell autopair anything anything-complete anything-extension anything-config clojure-mode clojurescript-mode coffee-mode go-mode haskell-mode move-text) "A list of packages to ensure that are installed at launch.")
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -33,7 +33,10 @@
 (setq config-dir (file-name-directory (or (buffer-file-name) load-file-name)))
 
 (add-to-list 'load-path config-dir)
+(add-to-list 'load-path "~/.emacs.d/vendor")
 (add-to-list 'load-path "~/.emacs.d/vendor/auto-complete")
+(add-to-list 'load-path "~/.emacs.d/vendor/elisp-cache")
+
 
 
 ;;; A quick & ugly PATH solution to Emacs on Mac OSX
