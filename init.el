@@ -1,5 +1,5 @@
 ;;; init.el --- Emacs configuration initialization module.
-;; 
+;;
 
 ;; ***************************************************************************
 ;; Automatically install default packages.
@@ -33,7 +33,10 @@
 (setq config-dir (file-name-directory (or (buffer-file-name) load-file-name)))
 
 (add-to-list 'load-path config-dir)
+(add-to-list 'load-path "~/.emacs.d/vendor")
 (add-to-list 'load-path "~/.emacs.d/vendor/auto-complete")
+(add-to-list 'load-path "~/.emacs.d/vendor/elisp-cache")
+
 
 
 ;;; A quick & ugly PATH solution to Emacs on Mac OSX
