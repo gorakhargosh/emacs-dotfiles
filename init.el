@@ -1,5 +1,5 @@
 ;;; init.el --- Emacs configuration initialization module.
-;; 
+;;
 
 ;; ***************************************************************************
 ;; Automatically install default packages.
@@ -18,7 +18,7 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-bindings starter-kit-js starter-kit-eshell autopair anything anything-complete anything-extension anything-config clojure-mode clojurescript-mode coffee-mode go-mode haskell-mode move-text) "A list of packages to ensure that are installed at launch.")
+(defvar my-packages '(elisp-cache starter-kit starter-kit-lisp starter-kit-bindings starter-kit-js starter-kit-eshell autopair anything anything-complete anything-extension anything-config clojure-mode clojurescript-mode coffee-mode go-mode haskell-mode move-text) "A list of packages to ensure that are installed at launch.")
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
