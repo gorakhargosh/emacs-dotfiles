@@ -1,7 +1,8 @@
 ;;; yesudeep.el --- Personal configuration.
 ;;
 
-
+(setq user-full-name "Yesudeep Mangalapilly")
+(setq user-mail-address "yesudeep@google.com")
 
 ;; IRC Settings.
 (setq erc-autojoin-channels-alist
