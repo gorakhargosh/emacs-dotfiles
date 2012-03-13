@@ -37,12 +37,25 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/auto-complete")
 (add-to-list 'load-path "~/.emacs.d/vendor/elisp-cache")
 
+;; Functions to determine the platform on which we're running.
+(defun system-type-is-darwin ()
+  (interactive)
+  "Return true if system is darwin-based (Mac OS X)"
+  (string-equal system-type "darwin"))
+(defun system-type-is-linux ()
+  (interactive)
+  "Return true if system is GNU/Linux-based."
+  (string-equal system-type "gnu/linux"))
 
 
 ;;; A quick & ugly PATH solution to Emacs on Mac OSX
-(if (string-equal "darwin" (symbol-name system-type))
+(if (system-type-is-darwin)
     (setenv "PATH" (concat "/usr/local/bin:/usr/bin" (getenv "PATH"))))
 (setenv "PATH" (concat (concat config-dir "bin") (getenv "PATH")))
+
+;;; Load up environment configuration for Mac OS X
+;(if (system-type-is-darwin)
+;    (require 'config-osx-environment))
 
 
 ;; ***************************************************************************
