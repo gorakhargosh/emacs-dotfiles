@@ -80,7 +80,6 @@
 (add-hook 'kill-emacs-hook 'byte-compile-user-init-file t t)
 
 
-
 ;; Programming language modes.
 (require 'clojure-mode)
 (require 'clojurescript-mode)
@@ -106,6 +105,9 @@
 
 ;; Snippet completion.
 (require 'yasnippet)
+(setq yas/snippet-dirs '("~/.emacs.d/snippets"))
+(yas/initialize)
+(yas/load-directory "~/.emacs.d/snippets")
 (yas/global-mode 1)
 
 ;; Automatically remove trailing whitespace.
