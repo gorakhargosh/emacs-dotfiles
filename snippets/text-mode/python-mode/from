@@ -1,0 +1,5 @@
+# -*- coding: utf-8 -*-
+# name: from
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# --
+from $1 import $0
