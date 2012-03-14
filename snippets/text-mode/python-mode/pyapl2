@@ -3,8 +3,7 @@
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
 #!/usr/bin/env python
-# -*- coding: utf-8; mode: python; tab-width: 2; indent-tabs-mode:nil; -*-
-# vim: tabstop=2 expandtab shiftwidth=2 softtabstop=2
+# -*- coding: utf-8 -*-
 #
 # Copyright ${1:`(nth 5 (decode-time))`} ${2:Google, Inc}.
 #
