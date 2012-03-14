@@ -111,4 +111,8 @@
 ;; Automatically remove trailing whitespace.
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;; Python-specific
+;(require 'pysmell)
+;(add-hook 'python-mode-hook (lambda () (pysmell-mode 1)))
+
 ;;; init.el ends here
