@@ -62,6 +62,62 @@
   (interactive "p")
   (move-line (if (null n) 1 n)))
 
+;; Text selection related. Taken from ergo-emacs.
+;; http://ergoemacs.googlecode.com/svn/trunk/ergoemacs/ergoemacs-keybindings/functions.el
+
+(defun select-text-in-quote ()
+  "Select text between the nearest left and right delimiters.
+Delimiters are paired characters:
+ () [] {} «» ‹› “” 〖〗 【】 「」 『』 （） 〈〉 《》 〔〕 ⦗⦘ 〘〙 ⦅⦆ 〚〛 ⦃⦄
+
+For practical purposes, it also includes double straight quote
+\", but not curly single quote matching pairs ‘’, because that is
+often used as apostrophy. It also consider both left and right
+angle brackets <> as either beginning or ending pair, so that it
+is easy to get content inside html tags."
+ (interactive)
+ (let (p1)
+   (skip-chars-backward "^<>([{“「『‹«（〈《〔【〖⦗〘⦅〚⦃\"")
+   (setq p1 (point))
+   (skip-chars-forward "^<>)]}”」』›»）〉》〕】〗⦘〙⦆〛⦄\"")
+   (set-mark p1)
+   )
+ )
+
+;; by Nikolaj Schumacher, 2008-10-20. Released under GPL.
+(defun semnav-up (arg)
+  (interactive "p")
+  (when (nth 3 (syntax-ppss))
+    (if (> arg 0)
+        (progn
+          (skip-syntax-forward "^\"")
+          (goto-char (1+ (point)))
+          (decf arg))
+      (skip-syntax-backward "^\"")
+      (goto-char (1- (point)))
+      (incf arg)))
+  (up-list arg))
+
+;; by Nikolaj Schumacher, 2008-10-20. Released under GPL.
+(defun extend-selection (arg &optional incremental)
+  "Select the current word.
+Subsequent calls expands the selection to larger semantic unit."
+  (interactive (list (prefix-numeric-value current-prefix-arg)
+                     (or (and transient-mark-mode mark-active)
+                         (eq last-command this-command))))
+  (if incremental
+      (progn
+        (semnav-up (- arg))
+        (forward-sexp)
+        (mark-sexp -1))
+    (if (> arg 1)
+        (extend-selection (1- arg) t)
+      (if (looking-at "\\=\\(\\s_\\|\\sw\\)*\\_>")
+          (goto-char (match-end 0))
+        (unless (memq (char-before) '(?\) ?\"))
+          (forward-sexp)))
+      (mark-sexp -1))))
+
 
 ;; Line insertion
 (defun insert-empty-line-below ()
@@ -85,6 +141,38 @@
   (open-line 1)
   (next-line 1)
   )
+
+
+;; Alphabet case
+(defun toggle-letter-case ()
+  "Toggle the letter case of current word or text selection.
+Toggles between: “all lower”, “Init Caps”, “ALL CAPS”."
+  (interactive)
+  (let (p1 p2 (deactivate-mark nil) (case-fold-search nil))
+    (if (region-active-p)
+        (setq p1 (region-beginning) p2 (region-end))
+      (let ((bds (bounds-of-thing-at-point 'word) ) )
+        (setq p1 (car bds) p2 (cdr bds)) ) )
+
+    (when (not (eq last-command this-command))
+      (save-excursion
+        (goto-char p1)
+        (cond
+         ((looking-at "[[:lower:]][[:lower:]]") (put this-command 'state "all lower"))
+         ((looking-at "[[:upper:]][[:upper:]]") (put this-command 'state "all caps") )
+         ((looking-at "[[:upper:]][[:lower:]]") (put this-command 'state "init caps") )
+         ((looking-at "[[:lower:]]") (put this-command 'state "all lower"))
+         ((looking-at "[[:upper:]]") (put this-command 'state "all caps") )
+         (t (put this-command 'state "all lower") ) ) ) )
+
+    (cond
+     ((string= "all lower" (get this-command 'state))
+      (upcase-initials-region p1 p2) (put this-command 'state "init caps"))
+     ((string= "init caps" (get this-command 'state))
+      (upcase-region p1 p2) (put this-command 'state "all caps"))
+     ((string= "all caps" (get this-command 'state))
+      (downcase-region p1 p2) (put this-command 'state "all lower")) )
+    ) )
 
 
 ;; Cleaning up indentation and whitespace.
@@ -114,4 +202,3 @@
 (provide 'config-defuns)
 
 ;;; config-defuns.el ends here
-

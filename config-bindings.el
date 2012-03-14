@@ -31,12 +31,12 @@
 (progn
 
   ;;; Based on the starter-kit-bindings.el package.
-  
+
   ;; Font size
   (define-key global-map (kbd "C-+") 'text-scale-increase)
   (define-key global-map (kbd "C--") 'text-scale-decrease)
   (define-key global-map (kbd "C-=") 'text-scale-increase)
-  
+
   ;; Use regex searches by default
   (global-set-key (kbd "C-s") 'isearch-forward-regexp)
   (global-set-key (kbd "\C-r") 'isearch-backward-regexp)
@@ -52,7 +52,7 @@
   (global-set-key (kbd "C-x f") 'esk-recentf-ido-find-file)
   (global-set-key (kbd "C-c y") 'bury-buffer)
   (global-set-key (kbd "C-c r") 'revert-buffer)
-  
+
   ;; Should be able to eval-and-replace anywhere.
   (global-set-key (kbd "C-c e") 'esk-eval-and-replace)
 
@@ -79,12 +79,16 @@
   ;; Clean up whitespace
   (global-set-key (kbd "C-c n") 'tidy-buffer)
 
+  ;; Text selection.
+  (global-set-key (kbd "M-8") 'extend-selection)
+  (global-set-key (kbd "M-*") 'select-text-in-quote)
+
   ;; Fix the mac delete key.
   ;;(global-set-key (kbd "<kp-delete>") 'delete-forward-char)
   ;;(global-set-key (kbd "C-<kp-delete>") 'kill-word)
   ;;;;(define-key global-map (kbd "<kp-delete>") 'delete-forward-char)
   ;;;;(define-key global-map [\d] 'delete-forward-char)
-  
+
   )
 
 (provide 'config-bindings)
