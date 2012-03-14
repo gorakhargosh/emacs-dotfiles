@@ -1,3 +1,6 @@
 [submodule "vendor/auto-complete"]
 	path = vendor/auto-complete
 	url = git@github.com:gorakhargosh/auto-complete.git
+[submodule "snippets/clojure-mode"]
+	path = snippets/clojure-mode
+	url = git://github.com/gorakhargosh/clojure-snippets.git
