@@ -18,7 +18,27 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-bindings starter-kit-js starter-kit-eshell autopair anything anything-complete anything-extension anything-config clojure-mode clojurescript-mode coffee-mode go-mode haskell-mode move-text yasnippet yasnippet-bundle) "A list of packages to ensure that are installed at launch.")
+(defvar my-packages '(starter-kit
+                      starter-kit-lisp
+                      starter-kit-bindings
+                      starter-kit-js
+                      starter-kit-eshell
+                      autopair
+                      anything
+                      anything-complete
+                      anything-extension
+                      anything-config
+                      clojure-mode
+                      clojurescript-mode
+                      coffee-mode
+                      go-mode
+                      haskell-mode
+                      move-text
+                      yasnippet
+                      yasnippet-bundle
+                      highlight-indentation
+                      )
+  "A list of packages to ensure that are installed at launch.")
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -115,6 +135,12 @@
 
 ;; Automatically remove trailing whitespace.
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(require 'highlight-indentation)
+(add-hook 'python-mode-hook 'highlight-indentation)
+(add-hook 'coffee-mode-hook 'highlight-indentation)
+(add-hook 'html-mode-hook 'highlight-indentation)
+
 
 ;; Python-specific
 ;(require 'pysmell)
