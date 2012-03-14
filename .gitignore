@@ -8,3 +8,8 @@ places
 url/
 hydra.el
 *.google.com.el
+ac-comphist.el
+ac-comphist.dat
+eshell/history
+eshell/lastdir
+tramp
