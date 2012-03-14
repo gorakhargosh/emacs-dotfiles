@@ -80,6 +80,7 @@
 (add-hook 'kill-emacs-hook 'byte-compile-user-init-file t t)
 
 (require 'iedit)
+(put 'narrow-to-region 'disabled nil)
 
 ;; Programming language modes.
 (require 'clojure-mode)
