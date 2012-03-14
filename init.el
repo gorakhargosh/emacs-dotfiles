@@ -36,6 +36,7 @@
 (add-to-list 'load-path "~/.emacs.d/vendor")
 (add-to-list 'load-path "~/.emacs.d/vendor/auto-complete")
 (add-to-list 'load-path "~/.emacs.d/vendor/elisp-cache")
+(add-to-list 'load-path "~/.emacs.d/vendor/iedit")
 
 ;; Functions to determine the platform on which we're running.
 (defun system-type-is-darwin ()

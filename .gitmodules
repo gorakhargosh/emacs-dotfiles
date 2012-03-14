@@ -4,3 +4,6 @@
 [submodule "snippets/text-mode/clojure-mode"]
 	path = snippets/text-mode/clojure-mode
 	url = git://github.com/gorakhargosh/clojure-snippets.git
+[submodule "vendor/iedit"]
+	path = vendor/iedit
+	url = git://github.com/gorakhargosh/iedit.git
