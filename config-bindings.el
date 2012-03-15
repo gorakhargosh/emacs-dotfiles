@@ -1,32 +1,32 @@
-;;; config-bindings.el --- Some default key bindings.
+;;; config-bindings.el --- Key bindings
 ;;
-;; Copyright (C) 2008-2010 Phil Hagelberg and contributors
-;; Copyright (C) 2011 Yesudeep Mangalapilly
+;; Copyright 2012 Google, Inc.
 ;;
-;; Author: Yesudeep Mangalapilly <yesudeep@gmail.com>
-;; Keywords: convenience
+;; Licensed under the Apache License, Version 2.0 (the "License");
+;; you may not use this file except in compliance with the License.
+;; You may obtain a copy of the License at
+;;
+;;    http://www.apache.org/licenses/LICENSE-2.0
+;;
+;; Unless required by applicable law or agreed to in writing, software
+;; distributed under the License is distributed on an "AS IS" BASIS,
+;; WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+;; See the License for the specific language governing permissions and
+;; limitations under the License.
+;;
+;; Author: yesudeep@google.com (Yesudeep Mangalapilly)
+;; Keywords: convenience, key bindings, keyboard shortcuts
 ;; Package-Requires:: ((starter-kit "2.0.1"))
 ;;
-;; This file is not a part of GNU Emacs.
+;; This file is NOT part of GNU Emacs.
 ;;
-;;; License:
+;;; Commentary:
 ;;
-;; This program is free software; you can redistribute it and/or
-;; modify it under the terms of the GNU General Public License
-;; as published by the Free Software Foundation; either version 3
-;; of the License, or (at your option) any later version.
+;; (require 'config-bindings)
 ;;
-;; This program is distributed in the hope that it will be useful,
-;; but WITHOUT ANY WARRANTY; without even the implied warranty of
-;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-;; GNU General Public License for more details.
-;;
-;; You should have received a copy of the GNU General Public License
-;; along with GNU Emacs; see the file COPYING.  If not, write to the
-;; Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-;; Boston, MA 02110-1301, USA.
-
 ;;; Code:
+;;
+
 
 (progn
 

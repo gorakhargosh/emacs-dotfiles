@@ -1,30 +1,20 @@
-;;; config-defuns.el --- Functionality used in my configuration.
+;;; config-defuns.el --- Configuration functionality.
 ;;
-;; Copyright (C) 2011 Yesudeep Mangalapilly
+;; Released into the public domain.
 ;;
-;; Author: Yesudeep Mangalapilly <yesudeep@gmail.com>
-;; Keywords: convenience
+;; Author: yesudeep@google.com (Yesudeep Mangalapilly)
+;; Keywords: configuration, functions
 ;;
-;; This file is not a part of GNU Emacs.
+;; This file is NOT part of GNU Emacs.
 ;;
-;;; License:
+;;; Commentary:
 ;;
-;; This program is free software; you can redistribute it and/or
-;; modify it under the terms of the GNU General Public License
-;; as published by the Free Software Foundation; either version 3
-;; of the License, or (at your option) any later version.
+;; Use it by issuing in your emacs configuration module.
 ;;
-;; This program is distributed in the hope that it will be useful,
-;; but WITHOUT ANY WARRANTY; without even the implied warranty of
-;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-;; GNU General Public License for more details.
+;;   (require 'config-defuns).
 ;;
-;; You should have received a copy of the GNU General Public License
-;; along with GNU Emacs; see the file COPYING.  If not, write to the
-;; Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-;; Boston, MA 02110-1301, USA.
-
 ;;; Code:
+;;
 
 ;; Kill entire line with C-k and use C-S-backspace for killing from beginning
 (defun kill-and-join-forward (&optional arg)
@@ -34,7 +24,6 @@
   (if (and (eolp) (not (bolp)))
       (delete-indentation t)
     (kill-line arg)))
-
 
 
 ;; Line movement --- http://www.emacswiki.org/emacs/MoveLine -- Joe Smith
