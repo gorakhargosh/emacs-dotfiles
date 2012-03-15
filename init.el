@@ -34,6 +34,7 @@
                       clojurescript-mode
                       coffee-mode
                       go-mode
+                      less-css-mode
                       haskell-mode
                       move-text
                       yasnippet
