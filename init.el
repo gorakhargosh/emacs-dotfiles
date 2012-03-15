@@ -37,6 +37,8 @@
                       yasnippet
                       yasnippet-bundle
                       highlight-indentation
+                      pymacs
+                      pysmell
                       )
   "A list of packages to ensure that are installed at launch.")
 
@@ -57,6 +59,8 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/auto-complete")
 (add-to-list 'load-path "~/.emacs.d/vendor/elisp-cache")
 (add-to-list 'load-path "~/.emacs.d/vendor/iedit")
+(add-to-list 'load-path "~/.emacs.d/vendor/python.el")
+
 
 ;; Functions to determine the platform on which we're running.
 (defun system-type-is-darwin ()
@@ -141,9 +145,11 @@
 (add-hook 'coffee-mode-hook 'highlight-indentation)
 (add-hook 'html-mode-hook 'highlight-indentation)
 
+(require 'python)
 
 ;; Python-specific
-;(require 'pysmell)
-;(add-hook 'python-mode-hook (lambda () (pysmell-mode 1)))
+(require 'pymacs)
+(require 'pysmell)
+(add-hook 'python-mode-hook (lambda () (pysmell-mode 1)))
 
 ;;; init.el ends here
