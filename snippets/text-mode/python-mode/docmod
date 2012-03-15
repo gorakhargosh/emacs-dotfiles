@@ -5,7 +5,7 @@
 """
 :module: $1
 :synopsis: $2
-:author: `(user-full-name)` <`user-mail-address`>
+:author: `user-mail-address` (`(user-full-name)`)
 
 """
 

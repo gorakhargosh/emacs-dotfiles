@@ -23,7 +23,7 @@
 """
 :module: $3
 :synopsis: $4
-:author: `(user-full-name)` <`user-mail-address`>
+:author: `user-mail-address` (`(user-full-name)`)
 """
 
 __author__ = "`user-mail-address` (`(user-full-name)`)"
