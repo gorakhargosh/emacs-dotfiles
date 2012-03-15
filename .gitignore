@@ -6,7 +6,6 @@ swank/
 .smex-items
 places
 url/
-hydra.el
 *.google.com.el
 ac-comphist.el
 ac-comphist.dat
