@@ -4,6 +4,8 @@
 (setq user-full-name "Yesudeep Mangalapilly")
 (setq user-mail-address "yesudeep@google.com")
 
+(menu-bar-mode t)
+
 ;; Don't use tabs when indenting in HTML mode.
 (add-hook
  'html-mode-hook
