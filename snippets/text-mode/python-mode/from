@@ -2,5 +2,4 @@
 # name: from
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-from $1 import $2
-$0
+from $1 import $0
