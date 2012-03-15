@@ -6,7 +6,9 @@
 ;; ---------------------------------------------------------------------------
 ;; This solves the problem of installing
 ;; these packages if you move between systems frequently and want them
-;; to remain in a consistent state.
+;; to remain in a consistent state. You may have to close and restart
+;; Emacs several times for the procedure to complete before it is
+;; usable. I've had to do about 3 such restarts when doing a fresh clone.
 
 (require 'package)
 (add-to-list 'package-archives
