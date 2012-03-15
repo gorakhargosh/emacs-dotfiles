@@ -60,26 +60,26 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/elisp-cache")
 (add-to-list 'load-path "~/.emacs.d/vendor/iedit")
 (add-to-list 'load-path "~/.emacs.d/vendor/python.el")
-
+(add-to-list 'load-path "~/.emacs.d/vendor/docutils/docutils/tools/editors/emacs")
 
 ;; Functions to determine the platform on which we're running.
-(defun system-type-is-darwin ()
+(defun system-type-is-darwin-p ()
   (interactive)
   "Return true if system is darwin-based (Mac OS X)"
   (string-equal system-type "darwin"))
-(defun system-type-is-linux ()
+(defun system-type-is-linux-p ()
   (interactive)
   "Return true if system is GNU/Linux-based."
   (string-equal system-type "gnu/linux"))
 
 
 ;;; A quick & ugly PATH solution to Emacs on Mac OSX
-(if (system-type-is-darwin)
+(if (system-type-is-darwin-p)
     (setenv "PATH" (concat "/usr/local/bin:/usr/bin" (getenv "PATH"))))
 (setenv "PATH" (concat (concat config-dir "bin") (getenv "PATH")))
 
 ;;; Load up environment configuration for Mac OS X
-;(if (system-type-is-darwin)
+;(if (system-type-is-darwin-p)
 ;    (require 'config-osx-environment))
 
 
@@ -146,10 +146,16 @@
 (add-hook 'html-mode-hook 'highlight-indentation)
 
 (require 'python)
+(require 'rst)
+(setq auto-mode-alist
+      (append '(("\\.txt$" . rst-mode)
+                ("\\.rst$" . rst-mode)
+                ("\\.rest$" . rst-mode)) auto-mode-alist))
+(add-hook 'rst-adjust-hook 'rst-toc-update)
 
 ;; Python-specific
-(require 'pymacs)
-(require 'pysmell)
-(add-hook 'python-mode-hook (lambda () (pysmell-mode 1)))
+;; (require 'pymacs)
+;; (require 'pysmell)
+;; (add-hook 'python-mode-hook (lambda () (pysmell-mode 1)))
 
 ;;; init.el ends here
