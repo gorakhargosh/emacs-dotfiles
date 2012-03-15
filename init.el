@@ -104,6 +104,8 @@
 (add-hook 'emacs-lisp-mode-hook 'my-emacs-lisp-mode-hook)
 (add-hook 'kill-emacs-hook 'byte-compile-user-init-file t t)
 
+(menu-bar-mode t)
+
 (require 'iedit)
 (put 'narrow-to-region 'disabled nil)
 
@@ -152,6 +154,22 @@
                 ("\\.rst$" . rst-mode)
                 ("\\.rest$" . rst-mode)) auto-mode-alist))
 (add-hook 'rst-adjust-hook 'rst-toc-update)
+
+;; Don't use tabs when indenting in HTML mode.
+(add-hook
+ 'html-mode-hook
+ '(lambda ()
+    (setq indent-tabs-mode nil)))
+
+;; Defines the python coding style.
+(defun set-python-coding-style ()
+  (setq indent-tabs-mode nil)
+  (setq require-final-newline 't)
+  (setq tab-width 2)
+  (setq py-indent-offset 2)
+  (setq python-indent 2))
+
+(add-hook 'python-mode-hook 'set-python-coding-style)
 
 ;; Python-specific
 ;; (require 'pymacs)
