@@ -13,9 +13,9 @@
 """
 :module: $4
 :synopsis: $5
-:author: `user-mail-address` (`(user-full-name)`)
+:author: ${6:`user-mail-address`} (${7:`(user-full-name)`})
 """
 
-__author__ = "`user-mail-address` (`(user-full-name)`)"
+__author__ = "$6 ($7)"
 
 $0
