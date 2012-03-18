@@ -89,6 +89,11 @@
   ;;;;(define-key global-map (kbd "<kp-delete>") 'delete-forward-char)
   ;;;;(define-key global-map [\d] 'delete-forward-char)
 
+  ;; Shift regions left or right.
+  (global-set-key [C-S-right] 'shift-right)
+  (global-set-key [C-S-left] 'shift-left)
+  (global-set-key (kbd "s-]") 'shift-right)
+  (global-set-key (kbd "s-[") 'shift-left)
   )
 
 (provide 'config-bindings)
