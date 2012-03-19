@@ -88,7 +88,7 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/auto-complete")
 (add-to-list 'load-path "~/.emacs.d/vendor/elisp-cache")
 (add-to-list 'load-path "~/.emacs.d/vendor/iedit")
-(add-to-list 'load-path "~/.emacs.d/vendor/python.el")
+(add-to-list 'load-path "~/.emacs.d/vendor/python-el")
 (add-to-list 'load-path "~/.emacs.d/vendor/docutils/docutils/tools/editors/emacs")
 
 ;; Functions to determine the platform on which we're running.
