@@ -143,7 +143,9 @@
 (add-hook 'kill-emacs-hook 'byte-compile-user-init-file t t)
 
 ;; Automatically compile all modules on startup.
-(byte-compile-dotfiles)
+;; Don't enable this because it takes too much time
+;; on Mac OS X.
+;; (byte-compile-dotfiles)
 
 
 (menu-bar-mode t)
