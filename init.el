@@ -56,6 +56,8 @@
                       anything-complete
                       anything-extension
                       anything-config
+                      anything-match-plugin
+                      anything-obsolete
                       clojure-mode
                       clojurescript-mode
                       coffee-mode
@@ -116,6 +118,12 @@
 ;; Automatically recompile the emacs init file on buffer-save or exit
 ;; ---------------------------------------------------------------------------
 
+(defun byte-compile-dotfiles ()
+  "Byte compile all Emacs dotfiles."
+  (interactive)
+  ;; Automatically recompile the entire .emacs.d directory.
+  (byte-recompile-directory (expand-file-name "~/.emacs.d") 0))
+
 (defun byte-compile-user-init-file ()
   (let ((byte-compile-warnings '(unresolved)))
     ;; in case compilation fails, don't leave the old .elc around:
@@ -127,11 +135,16 @@
 
 (defun my-emacs-lisp-mode-hook ()
   (when (equal buffer-file-name user-init-file)
-    (add-hook 'after-save-hook 'byte-compile-user-init-file t t)))
+    (add-hook 'after-save-hook 'byte-compile-user-init-file t t)
+    (add-hook 'after-save-hook 'byte-compile-dotfiles)))
 
 ;; (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
 (add-hook 'emacs-lisp-mode-hook 'my-emacs-lisp-mode-hook)
 (add-hook 'kill-emacs-hook 'byte-compile-user-init-file t t)
+
+;; Automatically compile all modules on startup.
+(byte-compile-dotfiles)
+
 
 (menu-bar-mode t)
 

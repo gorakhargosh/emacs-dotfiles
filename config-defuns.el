@@ -214,13 +214,6 @@ Toggles between: “all lower”, “Init Caps”, “ALL CAPS”."
   (untabify-buffer)
   (delete-trailing-whitespace))
 
-(defun byte-compile-dotfiles ()
-  "Byte compile all Emacs dotfiles."
-  (interactive)
-  ;; Automatically recompile the entire .emacs.d directory.
-  (byte-recompile-directory (expand-file-name "~/.emacs.d") 0))
-
-
 (provide 'config-defuns)
 
 ;;; config-defuns.el ends here
