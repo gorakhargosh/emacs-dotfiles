@@ -94,6 +94,9 @@
   (global-set-key [C-S-left] 'shift-left)
   (global-set-key (kbd "s-]") 'shift-right)
   (global-set-key (kbd "s-[") 'shift-left)
+
+  ;; Byte recompile the entire emacs directory.
+  (global-set-key [C-S-M-down] 'byte-compile-dotfiles)
   )
 
 (provide 'config-bindings)

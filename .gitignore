@@ -9,6 +9,8 @@ url/
 *.google.com.el
 ac-comphist.el
 ac-comphist.dat
+anything-c-adaptive-history
 eshell/history
 eshell/lastdir
 tramp
+session.*

@@ -111,9 +111,6 @@
 ;(if (system-type-is-darwin-p)
 ;    (require 'config-osx-environment))
 
-;; Automatically recompile the entire .emacs.d directory.
-(byte-recompile-directory (expand-file-name "~/.emacs.d") 0)
-
 
 ;; ***************************************************************************
 ;; Automatically recompile the emacs init file on buffer-save or exit
