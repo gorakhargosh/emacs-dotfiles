@@ -143,7 +143,7 @@
 (add-hook 'kill-emacs-hook 'byte-compile-user-init-file t t)
 
 ;; Automatically compile all modules on startup.
-(byte-compile-dotfiles)
+;; (byte-compile-dotfiles)
 
 
 (menu-bar-mode t)
