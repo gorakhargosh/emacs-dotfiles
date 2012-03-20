@@ -92,6 +92,7 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/iedit")
 (add-to-list 'load-path "~/.emacs.d/vendor/python-el")
 (add-to-list 'load-path "~/.emacs.d/vendor/docutils/docutils/tools/editors/emacs")
+(add-to-list 'load-path "~/.emacs.d/vendor/cython/Tools")
 
 ;; Functions to determine the platform on which we're running.
 (defun system-type-is-darwin-p ()
@@ -192,6 +193,7 @@
 (add-hook 'html-mode-hook 'highlight-indentation)
 
 (require 'python)
+(require 'cython-mode)
 (require 'rst)
 (setq auto-mode-alist
       (append '(("\\.txt$" . rst-mode)
