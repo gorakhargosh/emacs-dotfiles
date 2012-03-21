@@ -193,7 +193,7 @@
 (add-hook 'coffee-mode-hook 'highlight-indentation)
 (add-hook 'html-mode-hook 'highlight-indentation)
 
-;;(require 'python)
+(require 'python)
 (require 'cython-mode)
 (require 'rst)
 (setq auto-mode-alist
@@ -217,8 +217,8 @@
   (setq require-final-newline 't)
   (setq tab-width 2)
   (setq py-indent-offset 2)
-  (setq python-indent 2))
-
+  (setq python-indent 2)
+  )
 (add-hook 'python-mode-hook 'set-python-coding-style)
 
 ;; Python-specific
