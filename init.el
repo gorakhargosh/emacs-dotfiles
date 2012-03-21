@@ -139,7 +139,7 @@
   (when (equal buffer-file-name user-init-file)
     (add-hook 'after-save-hook 'byte-compile-user-init-file t t)))
 
-;; (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
+(add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
 (add-hook 'emacs-lisp-mode-hook 'my-emacs-lisp-mode-hook)
 (add-hook 'kill-emacs-hook 'byte-compile-user-init-file t t)
 
@@ -155,10 +155,6 @@
 (require 'iedit)
 (put 'narrow-to-region 'disabled nil)
 
-;; Programming language modes.
-(require 'clojure-mode)
-(require 'clojurescript-mode)
-(require 'coffee-mode)
 
 ;; Key bindings and editing.
 (require 'move-text)
@@ -193,6 +189,14 @@
 (add-hook 'coffee-mode-hook 'highlight-indentation)
 (add-hook 'html-mode-hook 'highlight-indentation)
 
+;; Programming language modes.
+(require 'clojure-mode)
+(require 'clojurescript-mode)
+(require 'coffee-mode)
+(require 'cljdoc)
+;;(add-hook 'clojure-mode-hook 'turn-on-eldoc-mode)
+
+;; Disabled because it breaks a lot of shit.
 ;(require 'python)
 (require 'cython-mode)
 (require 'rst)
