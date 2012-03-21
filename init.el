@@ -197,11 +197,12 @@
 (require 'cython-mode)
 (require 'rst)
 (setq auto-mode-alist
-      (append '(("\\wscript$" . python-mode))))
-(setq auto-mode-alist
-      (append '(("\\.txt$" . rst-mode)
+      (append '(
+                ("\\wscript$" . python-mode)
+                ("\\.txt$" . rst-mode)
                 ("\\.rst$" . rst-mode)
-                ("\\.rest$" . rst-mode)) auto-mode-alist))
+                ("\\.rest$" . rst-mode))
+              auto-mode-alist))
 (add-hook 'rst-adjust-hook 'rst-toc-update)
 
 ;; Don't use tabs when indenting in HTML mode.
