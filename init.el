@@ -70,6 +70,8 @@
                       highlight-indentation
                       pymacs
                       pysmell
+                      gist
+                      markdown-mode
                       )
   "A list of packages to ensure that are installed at launch.")
 
@@ -184,6 +186,9 @@
 ;; Automatically remove trailing whitespace.
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;; Pastebin (gist.github.com)
+(require 'gist)
+
 (require 'highlight-indentation)
 (add-hook 'python-mode-hook 'highlight-indentation)
 (add-hook 'coffee-mode-hook 'highlight-indentation)
@@ -195,6 +200,7 @@
 (require 'coffee-mode)
 (require 'cljdoc)
 ;;(add-hook 'clojure-mode-hook 'turn-on-eldoc-mode)
+(require 'markdown-mode)
 
 ;; Disabled because it breaks a lot of shit.
 ;(require 'python)
