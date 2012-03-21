@@ -193,9 +193,11 @@
 (add-hook 'coffee-mode-hook 'highlight-indentation)
 (add-hook 'html-mode-hook 'highlight-indentation)
 
-(require 'python)
+;;(require 'python)
 (require 'cython-mode)
 (require 'rst)
+(setq auto-mode-alist
+      (append '(("\\wscript$" . python-mode))))
 (setq auto-mode-alist
       (append '(("\\.txt$" . rst-mode)
                 ("\\.rst$" . rst-mode)
