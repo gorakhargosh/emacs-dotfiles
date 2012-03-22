@@ -46,15 +46,13 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar default-packages '(
-                           anything
+(defvar default-packages '(anything
                            anything-config
                            anything-complete
                            anything-match-plugin
                            anything-extension
                            anything-obsolete
 
-                           ;; Alphabetically sorted list of utility modules.
                            autopair
                            gist
                            highlight-indentation
@@ -69,7 +67,6 @@
                            yasnippet
                            yasnippet-bundle
 
-                           ;; Language modes.
                            clojure-mode
                            clojurescript-mode
                            coffee-mode
@@ -77,8 +74,7 @@
                            haskell-mode
                            less-css-mode
                            markdown-mode
-                           )
-  "A list of packages to ensure that are installed at launch.")
+                           ))
 
 (dolist (p default-packages)
   (when (not (package-installed-p p))
