@@ -129,6 +129,10 @@
 ;; ***************************************************************************
 ;; Automatically recompile the emacs init file on buffer-save or exit
 ;; ---------------------------------------------------------------------------
+;; TODO: Write a module that automatically generates .elc files.
+;; - on emacs load
+;; - on buffer saves
+;; - when .elc files are stale
 
 (defun reload-user-init-file ()
   "thisandthat."
