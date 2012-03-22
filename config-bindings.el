@@ -97,6 +97,7 @@
 
   ;; Byte recompile the entire emacs directory.
   (global-set-key [C-S-M-down] 'byte-compile-dotfiles)
+  (global-set-key [C-S-M-up] 'reload-user-init-file)
   )
 
 (provide 'config-bindings)

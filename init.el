@@ -130,6 +130,12 @@
 ;; Automatically recompile the emacs init file on buffer-save or exit
 ;; ---------------------------------------------------------------------------
 
+(defun reload-user-init-file ()
+  "thisandthat."
+  (interactive)
+  (byte-compile-user-init-file)
+  (load-file (concat config-dir "init.el")))
+
 (defun byte-compile-dotfiles ()
   "Byte compile all Emacs dotfiles."
   (interactive)
