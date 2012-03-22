@@ -99,9 +99,12 @@
   (global-set-key [C-S-M-down] 'byte-compile-dotfiles)
   (global-set-key [C-S-M-up] 'reload-user-init-file)
 
-  ;; Toggle sr-speedbar
+  ;; Toggle sr-speedbar/nav
   ;;(global-set-key (kbd "s-s") 'sr-speedbar-toggle)
-  (global-set-key (kbd "s-f") 'nav)
+  ;;(global-set-key (kbd "s-f") 'nav)
+
+  ;; Code search using ack
+  ;;(global-set-key (kbd "s-f") 'ack)
   )
 
 (provide 'config-bindings)
