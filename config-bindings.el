@@ -45,13 +45,20 @@
 
   ;; Jump to a definition in the current file. (Protip: this is
   ;; awesome.)
-  (global-set-key (kbd "C-x C-i") 'esk-ido-menu)
+  ;;(global-set-key (kbd "C-x C-i") 'esk-ido-menu)
 
   ;; File finding
   (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
   (global-set-key (kbd "C-x f") 'esk-recentf-ido-find-file)
   (global-set-key (kbd "C-c y") 'bury-buffer)
   (global-set-key (kbd "C-c r") 'revert-buffer)
+  (global-set-key (kbd "C-x f") 'anything-for-files)
+  ;; Toggle sr-speedbar/nav
+  ;;(global-set-key (kbd "s-s") 'sr-speedbar-toggle)
+  (global-set-key (kbd "s-f") 'nav)
+
+  ;; Code search using ack
+  ;;(global-set-key (kbd "s-f") 'ack)
 
   ;; Should be able to eval-and-replace anywhere.
   (global-set-key (kbd "C-c e") 'esk-eval-and-replace)
@@ -99,12 +106,6 @@
   (global-set-key [C-S-M-down] 'byte-compile-dotfiles)
   (global-set-key [C-S-M-up] 'reload-user-init-file)
 
-  ;; Toggle sr-speedbar/nav
-  ;;(global-set-key (kbd "s-s") 'sr-speedbar-toggle)
-  ;;(global-set-key (kbd "s-f") 'nav)
-
-  ;; Code search using ack
-  ;;(global-set-key (kbd "s-f") 'ack)
   )
 
 (provide 'config-bindings)

@@ -53,6 +53,7 @@
                            anything-extension
                            anything-obsolete
 
+                           ac-slime
                            autopair
                            gist
                            highlight-indentation
@@ -216,6 +217,9 @@
 (require 'cljdoc)
 (require 'markdown-mode)
 
+(require 'ac-slime)
+(add-hook 'slime-mode-hook 'set-up-slime-ac)
+
 ;; Python-specific
 ;(require 'python)  ;; Disabled because it breaks a lot of shit.
 (require 'cython-mode)
@@ -261,7 +265,7 @@
     (setq indent-tabs-mode nil)))
 
 (require 'nav)
-(nav)
+;;(nav)
 ;; (require 'sr-speedbar)
 ;; (sr-speedbar-open)
 
