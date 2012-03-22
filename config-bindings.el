@@ -101,6 +101,7 @@
 
   ;; Toggle sr-speedbar
   ;;(global-set-key (kbd "s-s") 'sr-speedbar-toggle)
+  (global-set-key (kbd "s-f") 'nav)
   )
 
 (provide 'config-bindings)

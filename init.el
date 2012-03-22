@@ -260,8 +260,9 @@
  '(lambda ()
     (setq indent-tabs-mode nil)))
 
-(require 'sr-speedbar)
-(sr-speedbar-open)
+(require 'nav)
+;; (require 'sr-speedbar)
+;; (sr-speedbar-open)
 
 ;; Pastebin (gist.github.com)
 (require 'gist)
