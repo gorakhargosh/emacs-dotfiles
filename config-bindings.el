@@ -98,6 +98,9 @@
   ;; Byte recompile the entire emacs directory.
   (global-set-key [C-S-M-down] 'byte-compile-dotfiles)
   (global-set-key [C-S-M-up] 'reload-user-init-file)
+
+  ;; Toggle sr-speedbar
+  ;;(global-set-key (kbd "s-s") 'sr-speedbar-toggle)
   )
 
 (provide 'config-bindings)
