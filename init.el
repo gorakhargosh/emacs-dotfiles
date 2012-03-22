@@ -160,6 +160,11 @@
 (add-hook 'emacs-lisp-mode-hook 'onuserinitsave-auto-recompile)
 (add-hook 'kill-emacs-hook 'byte-compile-user-init-file t t)
 
+(let ((byte-compile-warnings '(unresolved)))
+  (when (not (file-exists-p (concat user-init-file ".elc")))
+    (byte-compile-file user-init-file)
+    (byte-compile-dotfiles)))
+
 
 ;; Automatically compile all modules on startup.
 ;; Don't enable this because it takes too much time
