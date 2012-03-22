@@ -3,6 +3,16 @@
 
 (require 'cl)
 
+(unless window-system
+  (xterm-mouse-mode 1)
+  (global-set-key [mouse-4] '(lambda ()
+                               (interactive)
+                               (scroll-down 1)))
+  (global-set-key [mouse-5] '(lambda ()
+                               (interactive)
+                               (scroll-up 1))))
+
+
 (defun env-line-to-cons (env-line)
   "Convert a string of the form \"VAR=VAL\" to a
 cons cell containing (\"VAR\" . \"VAL\")."
@@ -33,8 +43,8 @@ as launched by `$SHELL -lc' (or shell-cmd) to the current
 environment."
   (mapc 'setenv-from-cons (interactive-env-alist shell-cmd env-cmd)))
 
-(setenv-from-shell-environment)
-(setq exec-path (split-string (getenv "PATH") path-separator))
+;;(setenv-from-shell-environment)
+;;(setq exec-path (split-string (getenv "PATH") path-separator))
 
 (provide 'config-osx-environment)
 

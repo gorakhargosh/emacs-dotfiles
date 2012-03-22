@@ -117,8 +117,8 @@
 (setenv "PATH" (concat (concat config-dir "bin") (getenv "PATH")))
 
 ;;; Load up environment configuration for Mac OS X
-;(if (system-type-is-darwin-p)
-;    (require 'config-osx-environment))
+(if (system-type-is-darwin-p)
+    (require 'config-osx-environment))
 
 
 ;; ***************************************************************************
