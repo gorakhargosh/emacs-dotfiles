@@ -46,42 +46,41 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar default-packages-to-install '(
-                      ;; Loading anything has a specific order.
-                      anything
-                      anything-config
-                      anything-complete
-                      anything-match-plugin
-                      anything-extension
-                      anything-obsolete
+(defvar default-packages '(
+                           anything
+                           anything-config
+                           anything-complete
+                           anything-match-plugin
+                           anything-extension
+                           anything-obsolete
 
-                      ;; Alphabetically sorted list of utility modules.
-                      autopair
-                      gist
-                      highlight-indentation
-                      move-text
-                      pymacs
-                      pysmell
-                      starter-kit
-                      starter-kit-bindings
-                      starter-kit-eshell
-                      starter-kit-js
-                      starter-kit-lisp
-                      yasnippet
-                      yasnippet-bundle
+                           ;; Alphabetically sorted list of utility modules.
+                           autopair
+                           gist
+                           highlight-indentation
+                           move-text
+                           pymacs
+                           pysmell
+                           starter-kit
+                           starter-kit-bindings
+                           starter-kit-eshell
+                           starter-kit-js
+                           starter-kit-lisp
+                           yasnippet
+                           yasnippet-bundle
 
-                      ;; Language modes.
-                      clojure-mode
-                      clojurescript-mode
-                      coffee-mode
-                      go-mode
-                      haskell-mode
-                      less-css-mode
-                      markdown-mode
-                      )
+                           ;; Language modes.
+                           clojure-mode
+                           clojurescript-mode
+                           coffee-mode
+                           go-mode
+                           haskell-mode
+                           less-css-mode
+                           markdown-mode
+                           )
   "A list of packages to ensure that are installed at launch.")
 
-(dolist (p default-packages-to-install)
+(dolist (p default-packages)
   (when (not (package-installed-p p))
     (package-install p)))
 
@@ -163,6 +162,10 @@
 (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
 (add-hook 'emacs-lisp-mode-hook 'onuserinitsave-auto-recompile)
 (add-hook 'kill-emacs-hook 'byte-compile-user-init-file t t)
+
+(setq abbrev-file-name (concat config-dir "abbrev_defs"))
+(setq save-abbrevs t)
+(quietly-read-abbrev-file)
 
 (let ((byte-compile-warnings '(unresolved)))
   (when (not (file-exists-p (concat user-init-file ".elc")))
