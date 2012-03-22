@@ -15,4 +15,4 @@
 	url = git://github.com/gorakhargosh/python.el.git
 [submodule "vendor/cython"]
 	path = vendor/cython
-	url = git@github.com:gorakhargosh/cython.git
+	url = git://github.com/gorakhargosh/cython.git
