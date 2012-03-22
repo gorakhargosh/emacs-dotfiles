@@ -161,7 +161,7 @@
 
 (setq abbrev-file-name (concat config-dir "abbrev_defs"))
 (setq save-abbrevs t)
-(quietly-read-abbrev-file)
+;;(quietly-read-abbrev-file)
 
 (let ((byte-compile-warnings '(unresolved)))
   (when (not (file-exists-p (concat user-init-file ".elc")))
@@ -259,6 +259,9 @@
  'html-mode-hook
  '(lambda ()
     (setq indent-tabs-mode nil)))
+
+(require 'sr-speedbar)
+(sr-speedbar-open)
 
 ;; Pastebin (gist.github.com)
 (require 'gist)
