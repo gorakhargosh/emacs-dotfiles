@@ -261,6 +261,7 @@
     (setq indent-tabs-mode nil)))
 
 (require 'nav)
+(nav)
 ;; (require 'sr-speedbar)
 ;; (sr-speedbar-open)
 
