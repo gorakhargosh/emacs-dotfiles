@@ -19,3 +19,6 @@
 [submodule "vendor/srspeedbar"]
 	path = vendor/srspeedbar
 	url = git://github.com/gorakhargosh/sr-speedbar.git
+[submodule "vendor/ack-and-a-half"]
+	path = vendor/ack-and-a-half
+	url = git://github.com/gorakhargosh/ack-and-a-half.git
