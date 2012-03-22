@@ -16,3 +16,6 @@
 [submodule "vendor/cython"]
 	path = vendor/cython
 	url = git://github.com/gorakhargosh/cython.git
+[submodule "vendor/sr-speedbar"]
+	path = vendor/sr-speedbar
+	url = git://github.com/gorakhargosh/sr-speedbar.git
