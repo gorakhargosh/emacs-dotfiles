@@ -1,0 +1,5 @@
+#!/bin/sh
+
+git submodule update --init --recursive
+cd vendor/pymacs && make && sudo python setup.py install
+
