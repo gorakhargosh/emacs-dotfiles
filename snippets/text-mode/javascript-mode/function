@@ -1,0 +1,7 @@
+# name: function
+# key: function
+# contributor: Yesudeep Mangalapilly <yeusdeep@google.com>
+# --
+function ${1:function_name}(${2:arguments}){
+         $0
+}

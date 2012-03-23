@@ -58,8 +58,6 @@
                            gist
                            highlight-indentation
                            move-text
-                           pymacs
-                           pysmell
                            starter-kit
                            starter-kit-bindings
                            starter-kit-eshell
@@ -88,7 +86,7 @@
 
 ;; Configuration root.
 (setq config-dir (file-name-directory (or (buffer-file-name) load-file-name)))
-(setq vendor-library-dir (concat config-dir "vendor"))
+(setq vendor-library-dir (expand-file-name (concat config-dir "vendor")))
 (setq auto-complete-dict-dir (concat vendor-library-dir "auto-complete/dict"))
 (setq snippets-dir (concat config-dir "snippets"))
 
@@ -148,7 +146,7 @@
     (when (file-exists-p (concat user-init-file ".elc"))
       (delete-file (concat user-init-file ".elc")))
     (byte-compile-file user-init-file)
-    (byte-compile-dotfiles)
+    ;;(byte-compile-dotfiles)
     ;; (message "%s compiled" user-init-file)
     ))
 
@@ -196,7 +194,6 @@
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories auto-complete-dict-dir)
 (ac-config-default)
-
 (global-auto-complete-mode t)
 ;; (setq ac-auto-start 1)
 ;; (setq ac-dwim 1)
@@ -209,6 +206,25 @@
 (yas/load-directory snippets-dir)
 (yas/global-mode 1)
 
+(require 'js2-mode)
+;;(add-hook 'javascript-mode-hook 'yas-minor-mode)
+
+(add-hook 'js-mode-hook (lambda ()
+                         (yas-minor-mode t)))
+(add-hook 'js2-mode-hook (lambda ()
+                           (yas-minor-mode t)))
+(eval-after-load 'js2-mode
+  '(progn
+     (define-key js2-mode-map (kbd "TAB") (lambda()
+                                            (interactive)
+                                            (let ((yas/fallback-behavior 'return-nil))
+                                              (unless (yas/expand)
+                                                (indent-for-tab-command)
+                                                (if (looking-back "^\s*")
+                                                    (back-to-indentation))))))))
+
+(require 'ac-slime)
+(add-hook 'slime-mode-hook 'set-up-slime-ac)
 
 ;; Programming language modes.
 (require 'clojure-mode)
@@ -216,9 +232,6 @@
 (require 'coffee-mode)
 (require 'cljdoc)
 (require 'markdown-mode)
-
-(require 'ac-slime)
-(add-hook 'slime-mode-hook 'set-up-slime-ac)
 
 ;; Python-specific
 ;(require 'python)  ;; Disabled because it breaks a lot of shit.
@@ -254,7 +267,24 @@
                                (scroll-up 1))))
 
 
-;; (require 'pymacs)
+;;(require 'python-mode)
+(autoload 'python-mode "python-mode" "Python mode." t)
+(add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
+(add-to-list 'interpreter-mode-alist '("python" . python-mode))
+
+;; http://www.emacswiki.org/emacs/AutoCompleteSources#toc2
+(require 'pymacs)
+(setq pymacs-load-path '("~/.emacs.d/vendor/rope"
+                         "~/.emacs.d/vendor/ropemode"
+                         "~/.emacs.d/vendor/ropemacs"))
+(pymacs-load "ropemacs" "rope-")
+(setq ropemacs-enable-autoimport t)
+(ac-ropemacs-initialize)
+(add-hook 'python-mode-hook
+          (lambda ()
+            (add-to-list 'ac-sources 'ac-source-ropemacs)))
+
+
 ;; (require 'pysmell)
 ;; (add-hook 'python-mode-hook (lambda () (pysmell-mode 1)))
 
@@ -289,6 +319,7 @@
 (defalias 'ack-same 'ack-and-a-half-same)
 (defalias 'ack-find-file 'ack-and-a-half-find-file)
 (defalias 'ack-find-file-same 'ack-and-a-half-find-file-same)
+
 
 
 ;;; init.el ends here
