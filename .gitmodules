@@ -22,6 +22,3 @@
 [submodule "vendor/ack-and-a-half"]
 	path = vendor/ack-and-a-half
 	url = git://github.com/gorakhargosh/ack-and-a-half.git
-[submodule "vendor/pymacs"]
-	path = vendor/pymacs
-	url = git://github.com/pinard/Pymacs.git
