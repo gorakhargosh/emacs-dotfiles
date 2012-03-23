@@ -73,6 +73,7 @@
                            haskell-mode
                            less-css-mode
                            markdown-mode
+                           js2-mode
                            ))
 
 (dolist (p default-packages)
