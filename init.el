@@ -188,9 +188,22 @@
 (require 'config-defuns)
 (require 'config-bindings)
 
-;; Auto-completion.
+;; Enables mouse scrolling when using Emacs in the terminal.
+(unless window-system
+  (xterm-mouse-mode 1)
+  (global-set-key [mouse-4] '(lambda ()
+                               (interactive)
+                               (scroll-down 1)))
+  (global-set-key [mouse-5] '(lambda ()
+                               (interactive)
+                               (scroll-up 1))))
+
+
+;; Automatically pair pairable symbols like (), '', "", [], <>, etc.
 (require 'autopair)
 (autopair-global-mode)
+
+;; Automatic completion and suggestions.
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories auto-complete-dict-dir)
 (ac-config-default)
@@ -206,23 +219,6 @@
 (yas/load-directory snippets-dir)
 (yas/global-mode 1)
 
-(require 'js2-mode)
-;;(add-hook 'javascript-mode-hook 'yas-minor-mode)
-
-(add-hook 'js-mode-hook (lambda ()
-                         (yas-minor-mode t)))
-(add-hook 'js2-mode-hook (lambda ()
-                           (yas-minor-mode t)))
-(eval-after-load 'js2-mode
-  '(progn
-     (define-key js2-mode-map (kbd "TAB") (lambda()
-                                            (interactive)
-                                            (let ((yas/fallback-behavior 'return-nil))
-                                              (unless (yas/expand)
-                                                (indent-for-tab-command)
-                                                (if (looking-back "^\s*")
-                                                    (back-to-indentation))))))))
-
 (require 'ac-slime)
 (add-hook 'slime-mode-hook 'set-up-slime-ac)
 
@@ -233,44 +229,46 @@
 (require 'cljdoc)
 (require 'markdown-mode)
 
+;; JS2 Mode is way better.
+(require 'js2-mode)
+(add-hook 'js-mode-hook (lambda () (yas-minor-mode t)))
+(add-hook 'js2-mode-hook (lambda () (yas-minor-mode t)))
+(eval-after-load 'js2-mode
+  '(progn
+     (define-key js2-mode-map (kbd "TAB") (lambda()
+                                            (interactive)
+                                            (let ((yas/fallback-behavior 'return-nil))
+                                              (unless (yas/expand)
+                                                (indent-for-tab-command)
+                                                (if (looking-back "^\s*")
+                                                    (back-to-indentation))))))))
+
 ;; Python-specific
-;(require 'python)  ;; Disabled because it breaks a lot of shit.
+;;(require 'python)  ;; Disabled because it breaks a lot of shit.
 (require 'cython-mode)
-(require 'rst)
+(autoload 'python-mode "python-mode" "Python mode." t)
+(add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
+(add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
 ;; Defines the python coding style.
 (defun set-python-coding-style ()
   (setq indent-tabs-mode nil)
   (setq require-final-newline 't)
   (setq tab-width 2)
-  (setq py-indent-offset 2)
+  (setq python-indent-offset 2)
   (setq python-indent 2)
+  (setq py-indent-offset 2)
+  ;; (setq-default tab-width 2)
+  ;; (setq-default python-indent-offset 2)
+  ;; (setq-default py-indent-offset 2)
+  ;; (setq-default python-indent 2)
   )
 (setq auto-mode-alist
       (append '(
-                ("\\wscript$" . python-mode)
-                ("\\.txt$" . rst-mode)
-                ("\\.rst$" . rst-mode)
-                ("\\.rest$" . rst-mode))
+                ("\\wscript$" . python-mode))
               auto-mode-alist))
 (add-hook 'rst-adjust-hook 'rst-toc-update)
 (add-hook 'python-mode-hook 'set-python-coding-style)
-
-;; Enable mouse scrolling in emacs terminal.
-(unless window-system
-  (xterm-mouse-mode 1)
-  (global-set-key [mouse-4] '(lambda ()
-                               (interactive)
-                               (scroll-down 1)))
-  (global-set-key [mouse-5] '(lambda ()
-                               (interactive)
-                               (scroll-up 1))))
-
-
-;;(require 'python-mode)
-(autoload 'python-mode "python-mode" "Python mode." t)
-(add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
-(add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
 ;; http://www.emacswiki.org/emacs/AutoCompleteSources#toc2
 (require 'pymacs)
@@ -284,6 +282,14 @@
           (lambda ()
             (add-to-list 'ac-sources 'ac-source-ropemacs)))
 
+
+(require 'rst)
+(setq auto-mode-alist
+      (append '(
+                ("\\.txt$" . rst-mode)
+                ("\\.rst$" . rst-mode)
+                ("\\.rest$" . rst-mode))
+              auto-mode-alist))
 
 ;; (require 'pysmell)
 ;; (add-hook 'python-mode-hook (lambda () (pysmell-mode 1)))
