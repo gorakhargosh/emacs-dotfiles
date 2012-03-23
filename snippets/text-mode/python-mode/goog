@@ -4,18 +4,19 @@
 # key: goog
 # --
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
+# -*- coding:utf-8;mode:python;python-indent:${1:2};indent-tabs-mode:nil -*-
+# vim: set ft=python sts=$1 ts=$1 sw=$1 et
 #
-# Copyright ${1:`(nth 5 (decode-time))`} ${2:Google, Inc}.
-# ${3:All Rights Reserved.}
+# Copyright ${2:`(nth 5 (decode-time))`} ${3:Google, Inc}.
+# ${4:All Rights Reserved.}
 
 
 """
-:module: $4
-:synopsis: $5
-:author: ${6:`user-mail-address`} (${7:`(user-full-name)`})
+:module: $5
+:synopsis: $6
+:author: ${7:`user-mail-address`} (${8:`(user-full-name)`})
 """
 
-__author__ = "$6 ($7)"
+__author__ = "$7 ($8)"
 
 $0

@@ -4,9 +4,11 @@
 # key: apl2
 # --
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python
+# -*- coding:utf-8;mode:python;python-indent:${1:2};indent-tabs-mode:nil -*-
+# vim: set ft=python sts=$1 ts=$1 sw=$1 et
 #
-# Copyright ${1:`(nth 5 (decode-time))`} ${2:Google, Inc}.
+# Copyright ${2:`(nth 5 (decode-time))`} ${3:Google, Inc}.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,11 +24,11 @@
 
 
 """
-:module: $3
-:synopsis: $4
-:author: ${5:`user-mail-address`} (${6:`(user-full-name)`})
+:module: $4
+:synopsis: $5
+:author: ${6:`user-mail-address`} (${7:`(user-full-name)`})
 """
 
-__author__ = "$5 ($6)"
+__author__ = "$6 ($7)"
 
 $0
