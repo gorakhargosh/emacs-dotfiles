@@ -54,7 +54,7 @@
                            anything-obsolete
 
                            ac-slime
-                           autopair
+;;                           autopair
                            gist
                            highlight-indentation
                            move-text
@@ -163,10 +163,9 @@
 (setq save-abbrevs t)
 ;;(quietly-read-abbrev-file)
 
-(let ((byte-compile-warnings '(unresolved)))
-  (when (not (file-exists-p (concat user-init-file ".elc")))
-    (byte-compile-file user-init-file)
-    (byte-compile-dotfiles)))
+(when (not (file-exists-p (concat user-init-file ".elc")))
+  (byte-compile-file user-init-file)
+  (byte-compile-dotfiles))
 
 
 ;; Automatically compile all modules on startup.
