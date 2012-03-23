@@ -1,4 +1,6 @@
 *.elc
+*.py[co]
+
 elpa/
 backups/
 swank/
