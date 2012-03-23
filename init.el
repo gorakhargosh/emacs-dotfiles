@@ -258,10 +258,6 @@
   (setq python-indent-offset 2)
   (setq python-indent 2)
   (setq py-indent-offset 2)
-  ;; (setq-default tab-width 2)
-  ;; (setq-default python-indent-offset 2)
-  ;; (setq-default py-indent-offset 2)
-  ;; (setq-default python-indent 2)
   )
 (setq auto-mode-alist
       (append '(
