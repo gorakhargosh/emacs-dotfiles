@@ -108,6 +108,8 @@
   ;; Adds an alternative binding for yas/expand for cases when TAB
   ;; doesn't work.
   (global-set-key (kbd "M-?") 'yas/expand)
+
+  (global-set-key (kbd "M-S-<return>") 'insert-empty-line-above)
   )
 
 (provide 'config-bindings)
