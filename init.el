@@ -267,16 +267,17 @@
 (add-hook 'python-mode-hook 'set-python-coding-style)
 
 ;; http://www.emacswiki.org/emacs/AutoCompleteSources#toc2
-(require 'pymacs)
-(setq pymacs-load-path '("~/.emacs.d/vendor/rope"
-                         "~/.emacs.d/vendor/ropemode"
-                         "~/.emacs.d/vendor/ropemacs"))
-(pymacs-load "ropemacs" "rope-")
-(setq ropemacs-enable-autoimport t)
-(ac-ropemacs-initialize)
-(add-hook 'python-mode-hook
-          (lambda ()
-            (add-to-list 'ac-sources 'ac-source-ropemacs)))
+;; This is too slow at the moment on OS X.
+;; (require 'pymacs)
+;; (setq pymacs-load-path '("~/.emacs.d/vendor/rope"
+;;                          "~/.emacs.d/vendor/ropemode"
+;;                          "~/.emacs.d/vendor/ropemacs"))
+;; (pymacs-load "ropemacs" "rope-")
+;; (setq ropemacs-enable-autoimport t)
+;; (ac-ropemacs-initialize)
+;; (add-hook 'python-mode-hook
+;;           (lambda ()
+;;             (add-to-list 'ac-sources 'ac-source-ropemacs)))
 
 
 (require 'rst)
