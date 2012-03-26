@@ -197,10 +197,26 @@
                                (scroll-down 1)))
   (global-set-key [mouse-5] '(lambda ()
                                (interactive)
-                               (scroll-up 1))))
+                               (scroll-up 1)))
+  )
 
 (fset 'yes-or-no-p 'y-or-n-p)
 (global-linum-mode t)
+
+;; https://github.com/bbatsov/emacs-prelude/commit/d26924894b31d5dc3a8b2813719579baccc2b433
+(when (system-type-is-darwin-p)
+  (defun copy-from-osx ()
+    (shell-command-to-string "pbpaste"))
+
+  (defun paste-to-osx (text &optional push)
+    (let ((process-connection-type nil))
+      (let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
+        (process-send-string proc text)
+        (process-send-eof proc))))
+
+  (setq interprogram-cut-function 'paste-to-osx)
+  (setq interprogram-paste-function 'copy-from-osx)
+  )
 
 ;; Automatically pair pairable symbols like (), '', "", [], <>, etc.
 (require 'autopair)

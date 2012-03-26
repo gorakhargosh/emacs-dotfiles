@@ -105,6 +105,9 @@
   (global-set-key [C-S-M-down] 'byte-compile-dotfiles)
   (global-set-key [C-S-M-up] 'reload-user-init-file)
 
+  ;; Adds an alternative binding for yas/expand for cases when TAB
+  ;; doesn't work.
+  (global-set-key (kbd "M-?") 'yas/expand)
   )
 
 (provide 'config-bindings)
