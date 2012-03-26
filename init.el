@@ -199,6 +199,8 @@
                                (interactive)
                                (scroll-up 1))))
 
+(fset 'yes-or-no-p 'y-or-n-p)
+(global-linum-mode t)
 
 ;; Automatically pair pairable symbols like (), '', "", [], <>, etc.
 (require 'autopair)
