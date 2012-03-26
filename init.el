@@ -160,9 +160,8 @@
 (add-hook 'emacs-lisp-mode-hook 'onuserinitsave-auto-recompile)
 (add-hook 'kill-emacs-hook 'byte-compile-user-init-file t t)
 
-(setq abbrev-file-name (concat config-dir "abbrev_defs"))
-(setq save-abbrevs t)
-;;(quietly-read-abbrev-file)
+(setq save-abbrevs nil)
+
 
 (when (not (file-exists-p (concat user-init-file ".elc")))
   (byte-compile-file user-init-file)
@@ -274,9 +273,9 @@
 ;; Python-specific
 ;;(require 'python)  ;; Disabled because it breaks a lot of shit.
 (require 'cython-mode)
-(autoload 'python-mode "python-mode" "Python mode." t)
-(add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
-(add-to-list 'interpreter-mode-alist '("python" . python-mode))
+;;(autoload 'python-mode "python-mode" "Python mode." t)
+;;(add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
+;;(add-to-list 'interpreter-mode-alist '("python" . python-mode))
 
 ;; Defines the python coding style.
 (defun set-python-coding-style ()
