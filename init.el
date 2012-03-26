@@ -74,6 +74,7 @@
                            less-css-mode
                            markdown-mode
                            js2-mode
+                           protobuf-mode
                            ))
 
 (dolist (p default-packages)
@@ -243,6 +244,15 @@
 (require 'coffee-mode)
 (require 'cljdoc)
 (require 'markdown-mode)
+
+;; Protobuf mode
+(require 'protobuf-mode)
+(defconst g-protobuf-style
+  '((c-basic-offset . 2)
+    (indent-tabs-mode . nil)))
+(add-hook 'protobuf-mode-hook
+          (lambda () (c-add-style "g-protobuf-style" g-protobuf-style t)))
+
 
 ;; JS2 Mode is way better.
 (require 'js2-mode)
