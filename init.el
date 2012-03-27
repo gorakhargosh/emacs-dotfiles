@@ -68,7 +68,7 @@
 
                            ;; Don't need to install this separately
                            ;; as starter-kit-lisp handles it.
-                           ;;clojure-mode
+                           clojure-mode
                            clojurescript-mode
                            coffee-mode
                            go-mode
@@ -222,6 +222,9 @@
 ;; Automatically pair pairable symbols like (), '', "", [], <>, etc.
 (require 'autopair)
 (autopair-global-mode)
+;; Prevents: http://code.google.com/p/autopair/issues/detail?id=32
+(add-hook 'sldb-mode-hook #'(lambda () (setq autopair-dont-activate t)))
+(set-default 'autopair-dont-activate #'(lambda () (eq major-mode 'sldb-mode)))
 
 ;; Automatic completion and suggestions.
 (require 'auto-complete-config)
@@ -247,7 +250,7 @@
 ;; Don't enable clojure-mode here as starter-kit-lisp does it
 ;; also disabling this line allows swank and ac-slime to work without
 ;; breaking a sweat.
-;;(require 'clojure-mode)
+(require 'clojure-mode)
 (require 'clojurescript-mode)
 (require 'coffee-mode)
 (require 'cljdoc)
