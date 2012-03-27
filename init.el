@@ -66,7 +66,9 @@
                            yasnippet
                            yasnippet-bundle
 
-                           clojure-mode
+                           ;; Don't need to install this separately
+                           ;; as starter-kit-lisp handles it.
+                           ;;clojure-mode
                            clojurescript-mode
                            coffee-mode
                            go-mode
@@ -239,9 +241,13 @@
 
 (require 'ac-slime)
 (add-hook 'slime-mode-hook 'set-up-slime-ac)
+(add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
 
 ;; Programming language modes.
-(require 'clojure-mode)
+;; Don't enable clojure-mode here as starter-kit-lisp does it
+;; also disabling this line allows swank and ac-slime to work without
+;; breaking a sweat.
+;;(require 'clojure-mode)
 (require 'clojurescript-mode)
 (require 'coffee-mode)
 (require 'cljdoc)
