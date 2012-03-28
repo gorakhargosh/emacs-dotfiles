@@ -178,6 +178,13 @@
 ;; Enable the menu bar.
 (menu-bar-mode t)
 
+;; Stop prompting to save abbrevs.
+(setq save-abbrevs nil)
+
+(fset 'yes-or-no-p 'y-or-n-p)
+(global-linum-mode t)
+
+
 ;; Automatically remove trailing whitespace.
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
@@ -201,8 +208,6 @@
                                (scroll-up 1)))
   )
 
-(fset 'yes-or-no-p 'y-or-n-p)
-(global-linum-mode t)
 
 ;; https://github.com/bbatsov/emacs-prelude/commit/d26924894b31d5dc3a8b2813719579baccc2b433
 (when (system-type-is-darwin-p)
