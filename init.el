@@ -66,6 +66,8 @@
                            yasnippet
                            yasnippet-bundle
 
+                           ;; Don't need to install this separately
+                           ;; as starter-kit-lisp handles it.
                            clojure-mode
                            clojurescript-mode
                            coffee-mode
@@ -176,6 +178,13 @@
 ;; Enable the menu bar.
 (menu-bar-mode t)
 
+;; Stop prompting to save abbrevs.
+(setq save-abbrevs nil)
+
+(fset 'yes-or-no-p 'y-or-n-p)
+(global-linum-mode t)
+
+
 ;; Automatically remove trailing whitespace.
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
@@ -199,8 +208,6 @@
                                (scroll-up 1)))
   )
 
-(fset 'yes-or-no-p 'y-or-n-p)
-(global-linum-mode t)
 
 ;; https://github.com/bbatsov/emacs-prelude/commit/d26924894b31d5dc3a8b2813719579baccc2b433
 (when (system-type-is-darwin-p)
@@ -220,6 +227,9 @@
 ;; Automatically pair pairable symbols like (), '', "", [], <>, etc.
 (require 'autopair)
 (autopair-global-mode)
+;; Prevents: http://code.google.com/p/autopair/issues/detail?id=32
+(add-hook 'sldb-mode-hook #'(lambda () (setq autopair-dont-activate t)))
+(set-default 'autopair-dont-activate #'(lambda () (eq major-mode 'sldb-mode)))
 
 ;; Automatic completion and suggestions.
 (require 'auto-complete-config)
@@ -239,8 +249,12 @@
 
 (require 'ac-slime)
 (add-hook 'slime-mode-hook 'set-up-slime-ac)
+(add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
 
 ;; Programming language modes.
+;; Don't enable clojure-mode here as starter-kit-lisp does it
+;; also disabling this line allows swank and ac-slime to work without
+;; breaking a sweat.
 (require 'clojure-mode)
 (require 'clojurescript-mode)
 (require 'coffee-mode)
