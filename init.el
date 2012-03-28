@@ -240,6 +240,18 @@
 ;; (setq ac-dwim 1)
 (setq ac-ignore-case 1)
 
+(add-to-list 'ac-modes 'shell-mode)
+(defun set-up-shell-mode-ac ()
+  (setq ac-sources '(
+                     ac-source-symbols
+                     ac-source-abbrev
+                     ac-source-symbols
+                     ac-source-words-in-buffer
+                     ac-source-files-in-current-dir
+                     ac-source-words-in-same-mode-buffers
+                     ac-source-filename)))
+(add-hook 'shell-mode-hook 'set-up-shell-mode-ac)
+
 ;; Snippet completion.
 (require 'yasnippet)
 (setq yas/snippet-dirs '(snippets-dir))
@@ -252,9 +264,6 @@
 (add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
 
 ;; Programming language modes.
-;; Don't enable clojure-mode here as starter-kit-lisp does it
-;; also disabling this line allows swank and ac-slime to work without
-;; breaking a sweat.
 (require 'clojure-mode)
 (require 'clojurescript-mode)
 (require 'coffee-mode)
