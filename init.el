@@ -246,6 +246,7 @@
 (require 'coffee-mode)
 (require 'cljdoc)
 (require 'markdown-mode)
+(require 'gyp-mode)
 
 ;; Protobuf mode
 (require 'protobuf-mode)
