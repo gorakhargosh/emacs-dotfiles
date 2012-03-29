@@ -75,7 +75,7 @@
                            haskell-mode
                            less-css-mode
                            markdown-mode
-                           js2-mode
+                           ;;js2-mode
                            protobuf-mode
                            ))
 
@@ -281,18 +281,18 @@
 
 
 ;; JS2 Mode is way better.
-(require 'js2-mode)
-(add-hook 'js-mode-hook (lambda () (yas-minor-mode t)))
-(add-hook 'js2-mode-hook (lambda () (yas-minor-mode t)))
-(eval-after-load 'js2-mode
-  '(progn
-     (define-key js2-mode-map (kbd "TAB") (lambda()
-                                            (interactive)
-                                            (let ((yas/fallback-behavior 'return-nil))
-                                              (unless (yas/expand)
-                                                (indent-for-tab-command)
-                                                (if (looking-back "^\s*")
-                                                    (back-to-indentation))))))))
+;; (require 'js2-mode)
+;; (add-hook 'js-mode-hook (lambda () (yas-minor-mode t)))
+;; (add-hook 'js2-mode-hook (lambda () (yas-minor-mode t)))
+;; (eval-after-load 'js2-mode
+;;   '(progn
+;;      (define-key js2-mode-map (kbd "TAB") (lambda()
+;;                                             (interactive)
+;;                                             (let ((yas/fallback-behavior 'return-nil))
+;;                                               (unless (yas/expand)
+;;                                                 (indent-for-tab-command)
+;;                                                 (if (looking-back "^\s*")
+;;                                                     (back-to-indentation))))))))
 
 ;; Python-specific
 ;;(require 'python)  ;; Disabled because it breaks a lot of shit.
