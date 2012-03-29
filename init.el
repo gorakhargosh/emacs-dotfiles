@@ -348,6 +348,11 @@
  '(lambda ()
     (setq indent-tabs-mode nil)))
 
+;; RFC specific
+(require 'irfc)
+(setq irfc-directory "~/.emacs.d/rfc")
+(setq irfc-assoc-mode t)
+
 (require 'nav)
 ;;(nav)
 ;; (require 'sr-speedbar)
