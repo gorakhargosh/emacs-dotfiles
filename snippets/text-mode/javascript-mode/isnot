@@ -1,0 +1,5 @@
+# name: isnot
+# key: isnot
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# --
+$1 !== $0

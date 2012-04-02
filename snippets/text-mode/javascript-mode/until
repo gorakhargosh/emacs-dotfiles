@@ -1,0 +1,7 @@
+# name: until
+# key: until
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# --
+while (!(${condition})) {
+  $0
+}

@@ -1,0 +1,7 @@
+# name: while
+# key: while
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# --
+while (${condition}) {
+  $0
+}

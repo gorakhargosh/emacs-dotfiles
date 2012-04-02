@@ -1,0 +1,7 @@
+# name: unless
+# key: unless
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# --
+if (!(${condition})) {
+  $0
+}
