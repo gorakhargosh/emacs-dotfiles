@@ -1,6 +1,6 @@
 # name: lambda
 # key: fn
-# contributor: Yesudeep Mangalapilly <yeusdeep@google.com>
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
 function ($1){
   $0

@@ -1,6 +1,6 @@
 # name: function
 # key: function
-# contributor: Yesudeep Mangalapilly <yeusdeep@google.com>
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
 function ${1:name}($2){
   $0
