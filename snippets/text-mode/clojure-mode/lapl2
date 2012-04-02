@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-# name: apl2
+# name: lapl2
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
-# key: apl2
+# key: lapl2
 # --
 ;;; `(file-name-nondirectory (buffer-file-name (current-buffer)))` --- ${1:Short description.}
 ;;
