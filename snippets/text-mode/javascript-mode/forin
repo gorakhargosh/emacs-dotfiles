@@ -1,0 +1,7 @@
+# name: forin
+# key: forin
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# --
+for ($1 in $2) {
+  $0
+}
