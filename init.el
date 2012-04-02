@@ -280,7 +280,7 @@
           (lambda () (c-add-style "g-protobuf-style" g-protobuf-style t)))
 
 (defun set-up-javascript-ac ()
-  (setq 'ac-sources '(
+  (setq ac-sources '(
                       ac-source-words-in-buffer
                       ac-source-filename
                       ac-source-files-in-current-dir
@@ -293,6 +293,11 @@
                       )))
 (add-hook 'js-mode-hook 'set-up-javascript-ac)
 (setq js-indent-level 2)
+
+(defun setup-hs-minor-mode ()
+  (imenu-add-menubar-index)
+  (hs-minor-mode t))
+(add-hook 'js-mode-hook 'setup-hs-minor-mode)
 
 ;; JS2 Mode is way better.
 ;; (require 'js2-mode)

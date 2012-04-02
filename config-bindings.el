@@ -78,9 +78,10 @@
   (global-set-key (kbd "C-S-<backspace>") 'kill-and-join-forward)
 
   ;; Line insertion
-  (global-set-key (kbd "C-S-<return>") 'insert-empty-line-above)
+  ;;(global-set-key (kbd "C-S-<return>") 'insert-empty-line-above)
   (global-set-key (kbd "S-<return>") 'insert-empty-line-below)
   (global-set-key (kbd "s-<return>") 'insert-empty-line-below-next-line)
+  (global-set-key (kbd "M-S-<return>") 'insert-empty-line-above)
 
   ;; Clean up whitespace
   (global-set-key (kbd "C-c n") 'tidy-buffer)
@@ -109,7 +110,12 @@
   ;; doesn't work.
   (global-set-key (kbd "M-?") 'yas/expand)
 
-  (global-set-key (kbd "M-S-<return>") 'insert-empty-line-above)
+
+  ;; Show-hide
+  (global-set-key (kbd "C-c M-<right>") 'hs-show-block)
+  (global-set-key (kbd "C-c M-S-<right>") 'hs-show-all)
+  (global-set-key (kbd "C-c M-<left>") 'hs-hide-block)
+  (global-set-key (kbd "C-c M-S-<left>") 'hs-hide-all)
   )
 
 (provide 'config-bindings)
