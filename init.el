@@ -282,8 +282,8 @@
 (defun set-up-javascript-ac ()
   (setq ac-sources '(
                       ac-source-words-in-buffer
-                      ac-source-filename
-                      ac-source-files-in-current-dir
+;;                      ac-source-filename
+;;                      ac-source-files-in-current-dir
                       ac-source-abbrev
                       ac-source-functions
                       ac-source-symbols
