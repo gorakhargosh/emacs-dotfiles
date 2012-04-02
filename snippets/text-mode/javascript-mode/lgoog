@@ -9,7 +9,7 @@
  * Copyright ${2:`(nth 5 (decode-time))`} ${3:Google, Inc}.
  * ${4:All Rights Reserved.}
  *
- * @author: ${5:`user-mail-address`} (${6:`(user-full-name)`})
+ * @author ${5:`user-mail-address`} (${6:`(user-full-name)`})
  */
 
 $0

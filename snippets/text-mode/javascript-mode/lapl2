@@ -20,7 +20,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @author: ${4:`user-mail-address`} (${5:`(user-full-name)`})
+ * @author ${4:`user-mail-address`} (${5:`(user-full-name)`})
  */
 
 $0
