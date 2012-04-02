@@ -279,6 +279,20 @@
 (add-hook 'protobuf-mode-hook
           (lambda () (c-add-style "g-protobuf-style" g-protobuf-style t)))
 
+(defun set-up-javascript-ac ()
+  (setq 'ac-sources '(
+                      ac-source-words-in-buffer
+                      ac-source-filename
+                      ac-source-files-in-current-dir
+                      ac-source-abbrev
+                      ac-source-functions
+                      ac-source-symbols
+                      ac-source-variables
+                      ac-source-words-in-same-mode-buffers
+                      ac-source-yasnippet
+                      )))
+(add-hook 'js-mode-hook 'set-up-javascript-ac)
+(setq js-indent-level 2)
 
 ;; JS2 Mode is way better.
 ;; (require 'js2-mode)
