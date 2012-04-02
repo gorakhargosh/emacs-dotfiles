@@ -17,4 +17,5 @@ eshell/lastdir
 tramp
 session.*
 abbrev_defs
+.emacs.desktop
 
