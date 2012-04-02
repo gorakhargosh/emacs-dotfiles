@@ -1,7 +1,8 @@
 # -*- coding: utf-8; mode: snippet -*-
 # name: else
+# key: else
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
 else {
-    $0
+  $0
 }

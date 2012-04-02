@@ -1,7 +1,7 @@
-# name: function
-# key: function
+# name: lambda
+# key: fn
 # contributor: Yesudeep Mangalapilly <yeusdeep@google.com>
 # --
-function ${1:name}($2){
+function ($1){
   $0
 }
