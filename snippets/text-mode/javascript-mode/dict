@@ -1,0 +1,7 @@
+# name: dict
+# key: dict
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# --
+{
+  $1: $0
+}
