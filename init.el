@@ -185,9 +185,6 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (global-linum-mode t)
 
-;; Save and reload Emacs sessions.
-(desktop-save-mode t)
-
 ;; Automatically remove trailing whitespace.
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
