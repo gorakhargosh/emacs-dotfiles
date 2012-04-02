@@ -1,7 +1,7 @@
-# name: fordo
+# name: for with scope
 # key: fordo
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-for ($1) {(function($2){
+for ($1; $2; $3) {(function($4){
     $0
-})($3);}
+})($5);}

@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: console.log
+# name: console.log(...);
 # key: log
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --

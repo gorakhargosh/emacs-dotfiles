@@ -1,4 +1,4 @@
-# name: func
+# name: ... = function (...) { ... };
 # key: func
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --

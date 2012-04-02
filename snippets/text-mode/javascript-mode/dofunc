@@ -1,4 +1,4 @@
-# name: dofunc
+# name: (function(){...})();
 # key: dofunc
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --

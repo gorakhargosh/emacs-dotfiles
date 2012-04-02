@@ -1,4 +1,4 @@
-# name: function
+# name: function(...){...}
 # key: function
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --

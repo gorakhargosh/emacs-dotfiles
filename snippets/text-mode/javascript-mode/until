@@ -1,4 +1,4 @@
-# name: until
+# name: while(!(...)){...}
 # key: until
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --

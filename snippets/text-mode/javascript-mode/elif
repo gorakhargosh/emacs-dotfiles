@@ -1,8 +1,7 @@
 # -*- coding: utf-8; mode: snippet -*-
-# name: else { ... }
-# key: else
+# name: else if (...) { ... }
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-else {
+else if (${1:condition}){
   $0
 }

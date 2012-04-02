@@ -1,4 +1,4 @@
-# name: forin
+# name: for (... in ...) { ... }
 # key: forin
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --

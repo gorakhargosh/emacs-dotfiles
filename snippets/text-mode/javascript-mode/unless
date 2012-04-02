@@ -1,4 +1,4 @@
-# name: unless
+# name: if(!(...)){...}
 # key: unless
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
