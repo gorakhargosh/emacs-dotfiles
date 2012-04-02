@@ -1,0 +1,7 @@
+# name: dofunc
+# key: dofunc
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# --
+(function ($1){
+  $0
+})($2);
