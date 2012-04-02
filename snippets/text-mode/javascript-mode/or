@@ -1,0 +1,5 @@
+# name: or
+# key: or
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# --
+($1 || $2)$0
