@@ -185,6 +185,8 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (global-linum-mode t)
 
+;; Save and reload Emacs sessions.
+(desktop-save-mode t)
 
 ;; Automatically remove trailing whitespace.
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
@@ -312,7 +314,7 @@
         (add-to-list 'comint-preoutput-filter-functions
                      (lambda (output)
                        (replace-regexp-in-string ".*1G\.\.\..*5G" "..."
-                     (replace-regexp-in-string ".*1G.*3G" "&gt;" output))))))
+                     (replace-regexp-in-string ".*1G.*3G" "js> " output))))))
 
 
 ;; JS2 Mode is way better.
