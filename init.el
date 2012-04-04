@@ -182,6 +182,9 @@
 ;; Stop prompting to save abbrevs.
 (setq save-abbrevs nil)
 
+;; Automatically reload files changed on disk.
+(global-auto-revert-mode t)
+
 (fset 'yes-or-no-p 'y-or-n-p)
 (global-linum-mode t)
 
