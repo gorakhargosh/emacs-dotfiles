@@ -53,6 +53,9 @@
                            anything-extension
                            anything-obsolete
 
+;;                           ipython
+;;                           anything-ipython
+
                            ac-slime
 ;;                           autopair
                            gist
@@ -76,7 +79,7 @@
                            less-css-mode
                            markdown-mode
                            js-comint
-                           pysmell
+;;                           pysmell
                            ;;js2-mode
                            protobuf-mode
                            ))
@@ -387,6 +390,8 @@
 ;;           (lambda ()
 ;;             (add-to-list 'ac-sources 'ac-source-ropemacs)))
 
+;; (setq ipython-command "ipython")
+;; (require 'ipython)
 
 (require 'rst)
 (setq auto-mode-alist
