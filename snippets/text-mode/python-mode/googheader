@@ -4,8 +4,7 @@
 !/usr/bin/env python
 -*- coding: utf-8 -*-
 
-Copyright ${1:`(nth 5 (decode-time))`} ${2:Google, Inc}.
-${3:All Rights Reserved.}
+Copyright ${1:`(nth 5 (decode-time))`} ${2:Google, Inc}. ${3:All Rights Reserved.}
 `(let () (comment-region (point-min) (point-at-eol 0)))`
 
 
