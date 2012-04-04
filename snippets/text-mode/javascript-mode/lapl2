@@ -4,7 +4,7 @@
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
 /*!
- * Copyright ${1:`(nth 5 (decode-time))`} ${2:Google, Inc}.
+ * Copyright ${1:`(nth 5 (decode-time))`} ${2:Google Inc}.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

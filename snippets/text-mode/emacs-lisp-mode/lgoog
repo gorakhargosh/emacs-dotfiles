@@ -5,7 +5,7 @@
 # --
 ;;; `(file-name-nondirectory (buffer-file-name (current-buffer)))` --- ${1:Short description.}
 ;;
-;; Copyright ${2:`(nth 5 (decode-time))`} ${3:Google, Inc}. All Rights Reserved.
+;; Copyright ${2:`(nth 5 (decode-time))`} ${3:Google Inc}. All Rights Reserved.
 ;;
 ;; Author: ${4:`user-mail-address`} (${5:`(user-full-name)`})
 ;; Keywords: $6

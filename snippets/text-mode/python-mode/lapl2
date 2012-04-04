@@ -7,7 +7,7 @@
 # -*- coding:utf-8;mode:python;python-indent:${1:2};indent-tabs-mode:nil -*-
 # vim: set ft=python sts=$1 ts=$1 sw=$1 et
 #
-# Copyright ${2:`(nth 5 (decode-time))`} ${3:Google, Inc}.
+# Copyright ${2:`(nth 5 (decode-time))`} ${3:Google Inc}.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.

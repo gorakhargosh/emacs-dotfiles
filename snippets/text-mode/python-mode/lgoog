@@ -7,12 +7,13 @@
 # -*- coding:utf-8;mode:python;python-indent:${1:2};indent-tabs-mode:nil -*-
 # vim: set ft=python sts=$1 ts=$1 sw=$1 et
 #
-# Copyright ${2:`(nth 5 (decode-time))`} ${3:Google, Inc}. ${4:All Rights Reserved.}
+# Copyright ${2:`(nth 5 (decode-time))`} ${3:Google Inc}. ${4:All Rights Reserved.}
 
 
-"""
-:module: $5
-:synopsis: $6
+"""${5:A one line summary of the module or script, terminated by a period}.
+
+:module: $6
+:synopsis: $5.
 :author: ${7:`user-mail-address`} (${8:`(user-full-name)`})
 """
 
