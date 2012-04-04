@@ -76,6 +76,7 @@
                            less-css-mode
                            markdown-mode
                            js-comint
+                           pysmell
                            ;;js2-mode
                            protobuf-mode
                            ))
@@ -354,6 +355,25 @@
 (add-hook 'rst-adjust-hook 'rst-toc-update)
 (add-hook 'python-mode-hook 'set-python-coding-style)
 
+;; Autocompletion using pysmell.
+;; (require 'pysmell)
+;; (add-hook 'python-mode-hook (lambda () (pysmell-mode 1)))
+
+;; (require 'pysmell)
+;; (defvar ac-source-pysmell
+;;   '((candidates
+;;      . (lambda ()
+;;          (require 'pysmell)
+;;          (pysmell-mode 1)
+;;          (pysmell-get-all-completions))))
+;;   "Source for PySmell")
+
+;; (add-hook 'python-mode-hook
+;;           '(lambda ()
+;;              (set (make-local-variable 'ac-sources) (append ac-sources '(ac-source-pysmell)))))
+
+
+;; Autocompletion using ropemacs.
 ;; http://www.emacswiki.org/emacs/AutoCompleteSources#toc2
 ;; This is too slow at the moment on OS X.
 ;; (require 'pymacs)
@@ -376,8 +396,6 @@
                 ("\\.rest$" . rst-mode))
               auto-mode-alist))
 
-;; (require 'pysmell)
-;; (add-hook 'python-mode-hook (lambda () (pysmell-mode 1)))
 
 ;; Don't use tabs when indenting in HTML mode.
 (add-hook
