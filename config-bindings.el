@@ -116,6 +116,9 @@
   (global-set-key (kbd "C-c M-S-<right>") 'hs-show-all)
   (global-set-key (kbd "C-c M-<left>") 'hs-hide-block)
   (global-set-key (kbd "C-c M-S-<left>") 'hs-hide-all)
+
+  ;; Magit
+  (global-set-key (kbd "C-c g") 'magit-status)
   )
 
 (provide 'config-bindings)
