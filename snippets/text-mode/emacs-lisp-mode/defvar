@@ -1,6 +1,5 @@
 # -*- mode: snippet -*-
 # name: (defvar *name* ...)
-# key: defvar
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
 (defvar *${1:name}* $2

@@ -26,12 +26,19 @@
 ;;
 ;;; Commentary:
 ;;
-;; $8
+;; $1
+;;
+;; In order to use the functionality in this module, load it like this:
+;;
+;;     (require '$8)
+;;
+;; $9
 ;;
 ;;; Code:
 ;;
 
 $0
 
+(provide '${8:`(file-name-sans-extension (file-name-nondirectory (buffer-file-name (current-buffer))))`})
 
 ;;; `(file-name-nondirectory (buffer-file-name (current-buffer)))` ends here

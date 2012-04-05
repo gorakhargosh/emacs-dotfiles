@@ -1,6 +1,5 @@
 # -*- mode: snippet -*-
 # name: (defconstant +name+ ...)
-# key: defconstant
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
 (defconstant +${1:name}+ $2
