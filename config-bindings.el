@@ -83,6 +83,10 @@
   (global-set-key (kbd "s-<return>") 'insert-empty-line-below-next-line)
   (global-set-key (kbd "M-S-<return>") 'insert-empty-line-above)
 
+  ;; Line or region duplication.
+  (global-set-key (kbd "C-c d") 'duplicate-current-line-or-region)
+  (global-set-key (kbd "C-c C-d") 'duplicate-current-line-or-region)
+
   ;; Clean up whitespace
   (global-set-key (kbd "C-c n") 'tidy-buffer)
 
@@ -119,6 +123,9 @@
 
   ;; Magit
   (global-set-key (kbd "C-c g") 'magit-status)
+
+  ;; Reload init file.
+  (global-set-key (kbd "C-.") 'reload-current-init-file)
   )
 
 (provide 'config-bindings)
