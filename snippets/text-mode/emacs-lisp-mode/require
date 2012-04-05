@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: (require ...)
+# key: require
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# --
+(require '${1:module_name})$0
