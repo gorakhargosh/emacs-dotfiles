@@ -445,6 +445,8 @@
 (defalias 'ack-find-file 'ack-and-a-half-find-file)
 (defalias 'ack-find-file-same 'ack-and-a-half-find-file-same)
 
-
+;; Wrap regions.
+;; (require 'wrap-region)
+;; (wrap-region-global-mode t)
 
 ;;; init.el ends here
