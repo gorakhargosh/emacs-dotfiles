@@ -402,11 +402,17 @@
               auto-mode-alist))
 
 
+;; HTML and markup specific
+;; zencoding
+(require 'zencoding-mode)
+(add-hook 'sgml-mode-hook 'zencoding-mode)
+
 ;; Don't use tabs when indenting in HTML mode.
 (add-hook
  'html-mode-hook
  '(lambda ()
     (setq indent-tabs-mode nil)))
+
 
 ;; RFC specific
 (require 'irfc)
