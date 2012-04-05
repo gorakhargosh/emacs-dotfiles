@@ -4,4 +4,4 @@
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
 (progn
-  ($0))
+  $0)

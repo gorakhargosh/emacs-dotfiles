@@ -1,7 +1,6 @@
 # -*- mode: snippet -*-
-# name: (while ... ...)
-# key: while
+# name: (list ... ...)
+# key: list
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-(while (${1:condition})
-  $0)
+(list $0)
