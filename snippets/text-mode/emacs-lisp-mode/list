@@ -3,4 +3,4 @@
 # key: list
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-(list $0)
+(list $1)$0
