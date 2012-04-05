@@ -19,3 +19,6 @@
 [submodule "vendor/Pymacs"]
 	path = vendor/Pymacs
 	url = git://github.com/gorakhargosh/Pymacs.git
+[submodule "vendor/zencoding"]
+	path = vendor/zencoding
+	url = git://github.com/gorakhargosh/zencoding.git
