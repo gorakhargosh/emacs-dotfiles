@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: (message "..." ...)
+# key: message
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# --
+(message "$1" $0)
