@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: (defmacro name ...)
+# key: defmacro
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# --
+(defmacro ${1:name} ($2)
+  "${3:Description.}"
+  $0)
