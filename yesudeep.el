@@ -5,7 +5,7 @@
 (setq user-mail-address "yesudeep@google.com")
 
 ;;(set-face-attribute 'default nil :family "Monaco" :height 100)
-(set-face-attribute 'default nil :family "Consolas" :height 140)
+;;(set-face-attribute 'default nil :family "Consolas" :height 140)
 
 ;; IRC Settings.
 (setq erc-autojoin-channels-alist
