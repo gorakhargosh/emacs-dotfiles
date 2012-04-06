@@ -46,12 +46,13 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar default-packages '(anything
-                           anything-config
-                           anything-complete
-                           anything-match-plugin
-                           anything-extension
-                           anything-obsolete
+(defvar default-packages '(
+                           ;; anything
+                           ;; anything-config
+                           ;; anything-complete
+                           ;; anything-match-plugin
+                           ;; anything-extension
+                           ;; anything-obsolete
 
 ;;                           ipython
 ;;                           anything-ipython
@@ -448,5 +449,8 @@
 ;; Wrap regions.
 ;; (require 'wrap-region)
 ;; (wrap-region-global-mode t)
+
+(require 'helm-config)
+(helm-mode 1)
 
 ;;; init.el ends here

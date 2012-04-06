@@ -51,7 +51,7 @@
   (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
   (global-set-key (kbd "C-c y") 'bury-buffer)
   (global-set-key (kbd "C-c r") 'revert-buffer)
-  (global-set-key (kbd "C-x f") 'anything-for-files)
+  (global-set-key (kbd "C-x f") 'helm-for-files)
   ;; Toggle sr-speedbar/nav
   ;;(global-set-key (kbd "s-s") 'sr-speedbar-toggle)
   (global-set-key (kbd "C-x C-a") 'nav)
