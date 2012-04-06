@@ -33,7 +33,7 @@
   ;;; Based on the starter-kit-bindings.el package.
 
   ;; Helm M-x is awesome.
-  (global-set-key (kbd "M-x") 'helm-M-x)
+  ;;(global-set-key (kbd "M-x") 'helm-M-x)
 
   ;; Font size
   (define-key global-map (kbd "C-+") 'text-scale-increase)
