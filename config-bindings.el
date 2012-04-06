@@ -34,6 +34,7 @@
 
   ;; Helm M-x is awesome.
   ;;(global-set-key (kbd "M-x") 'helm-M-x)
+  (global-set-key (kbd "C-c h") 'helm-mini)
 
   ;; Font size
   (define-key global-map (kbd "C-+") 'text-scale-increase)
