@@ -22,3 +22,6 @@
 [submodule "vendor/zencoding"]
 	path = vendor/zencoding
 	url = git://github.com/gorakhargosh/zencoding.git
+[submodule "vendor/helm"]
+	path = vendor/helm
+	url = git://github.com/emacs-helm/helm.git
