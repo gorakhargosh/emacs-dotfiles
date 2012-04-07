@@ -47,18 +47,7 @@
 
 ;; Add in your own as you wish:
 (defvar default-packages '(
-                           ;; anything
-                           ;; anything-config
-                           ;; anything-complete
-                           ;; anything-match-plugin
-                           ;; anything-extension
-                           ;; anything-obsolete
-
-;;                           ipython
-;;                           anything-ipython
-
                            ac-slime
-;;                           autopair
                            gist
                            highlight-indentation
                            move-text
@@ -69,9 +58,6 @@
                            starter-kit-lisp
                            yasnippet
                            yasnippet-bundle
-
-                           ;; Don't need to install this separately
-                           ;; as starter-kit-lisp handles it.
                            clojure-mode
                            clojurescript-mode
                            coffee-mode
