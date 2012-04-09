@@ -7,6 +7,7 @@
 ;; Keywords: languages python
 ;; Last edit: 2010-02-12
 ;; Version: 1.01
+;; URL: https://gist.github.com/302847
 
 ;; python-pep8.el is free software; you can redistribute it and/or modify it
 ;; under the terms of the GNU General Public License as published by the Free
@@ -29,6 +30,8 @@
 ;; (autoload 'pep8 "python-pep8")
 ;;
 ;;; Code:
+
+(require 'compile)
 
 (defgroup python-pep8 nil
   "Minor mode for running pep8"

@@ -7,6 +7,7 @@
 ;; Keywords: languages python
 ;; Last edit: 2010-02-12
 ;; Version: 1.01
+;; URL: https://gist.github.com/302848
 
 ;; python-pylint.el is free software; you can redistribute it and/or modify it
 ;; under the terms of the GNU General Public License as published by the Free
@@ -29,6 +30,8 @@
 ;; (autoload 'pylint "python-pylint")
 ;;
 ;;; Code:
+
+(require 'compile)
 
 (defgroup python-pylint nil
   "Minor mode for running pylint"

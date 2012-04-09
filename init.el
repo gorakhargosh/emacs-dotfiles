@@ -345,6 +345,18 @@
 (add-hook 'rst-adjust-hook 'rst-toc-update)
 (add-hook 'python-mode-hook 'set-python-coding-style)
 
+;; Python linting and code compliance.
+;; Requires installing pep8 and pylint using pip:
+;;
+;;   sudo pip install pep8 pylint
+;;
+(require 'python-pep8)
+(require 'python-pylint)
+(autoload 'python-pep8 "python-pep8")
+(autoload 'pep8 "python-pep8")
+(autoload 'python-pylint "python-pylint")
+(autoload 'pylint "python-pylint")
+
 ;; Autocompletion using pysmell.
 ;; (require 'pysmell)
 ;; (add-hook 'python-mode-hook (lambda () (pysmell-mode 1)))
