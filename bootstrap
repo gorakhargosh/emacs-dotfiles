@@ -3,5 +3,5 @@
 pwd=`pwd`
 git submodule update --init --recursive
 cd vendor/Pymacs && make && sudo python setup.py install
-sudo pip install pep8 pylint
+sudo pip install pep8 pylint rlcompleter2 ipython
 cd $PWD
