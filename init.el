@@ -357,10 +357,10 @@
 (autoload 'python-pylint "python-pylint")
 (autoload 'pylint "python-pylint")
 
-(defun onsave-run-pylint ()
-  "Runs pylint on the code as soon as the Python file is saved."
-  (add-hook 'after-save-hook 'python-pylint))
-(add-hook 'python-mode-hook 'onsave-run-pylint)
+;; (defun onsave-run-pylint ()
+;;   "Runs pylint on the code as soon as the Python file is saved."
+;;   (add-hook 'after-save-hook 'python-pylint))
+;; (add-hook 'python-mode-hook 'onsave-run-pylint)
 
 ;; Autocompletion using pysmell.
 ;; (require 'pysmell)
