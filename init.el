@@ -69,6 +69,7 @@
 ;;                           pysmell
                            ;;js2-mode
                            protobuf-mode
+                           yaml-mode
                            ))
 
 (dolist (p default-packages)
@@ -397,6 +398,27 @@
 ;; (setq ipython-command "ipython")
 ;; (require 'ipython)
 
+;; YAML mode.
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
+(add-hook 'yaml-mode-hook
+          '(lambda ()
+             (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+;; YAML autocomplete configuration.
+(defun set-up-yaml-mode-ac ()
+  (setq ac-sources '(
+                     ac-source-symbols
+                     ac-source-abbrev
+                     ac-source-symbols
+                     ac-source-words-in-buffer
+                     ac-source-files-in-current-dir
+                     ac-source-words-in-same-mode-buffers
+                     ac-source-filename)))
+(add-to-list 'ac-modes 'yaml-mode)
+(add-hook 'yaml-mode-hook 'set-up-yaml-mode-ac)
+
+;; Restructured text.
 (require 'rst)
 (setq auto-mode-alist
       (append '(
