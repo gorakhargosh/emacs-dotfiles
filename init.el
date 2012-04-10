@@ -266,6 +266,23 @@
 (require 'markdown-mode)
 (require 'gyp-mode)
 
+;; CSS and LESS.
+(require 'less-css-mode)
+(defun set-less-css-coding-style ()
+  (setq less-css-indent-level 2)
+  (setq indent-tabs-mode nil)
+  (setq require-final-newline 't)
+  (setq tab-width 2)
+)
+(add-hook 'less-css-mode-hook 'set-less-css-coding-style)
+(defun set-css-coding-style ()
+  (setq css-indent-offset 2)
+  (setq indent-tabs-mode nil)
+  (setq require-final-newline 't)
+  (setq tab-width 2)
+  )
+(add-hook 'css-mode-hook 'set-css-coding-style)
+
 ;; Protobuf mode
 (require 'protobuf-mode)
 (defconst g-protobuf-style
