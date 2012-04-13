@@ -5,3 +5,4 @@ git submodule update --init --recursive
 cd vendor/Pymacs && make && sudo python setup.py install
 sudo pip install pep8 pylint rlcompleter2 ipython
 cd $PWD
+echo "Run sudo aptitude install ack-grep on Ubuntu."
