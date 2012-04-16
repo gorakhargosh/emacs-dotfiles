@@ -3,7 +3,6 @@
 # contributor: Orestis Markou
 # contributor: Yasser González Fernández <yglez@uh.cu>
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
-# key: def
 # --
 def ${1:name}($2):
     """
