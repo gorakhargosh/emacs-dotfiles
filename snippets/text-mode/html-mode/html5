@@ -14,17 +14,20 @@
   <title>${1:Type your title here.}</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="$2">
 </head>
 <body>
-  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em>
+  <a href="http://browsehappy.com/">Upgrade to a different browser</a> or
+  <a href="http://www.google.com/chromeframe/?redirect=true">install
+  Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
   $0
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/${2:1.7.2}/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-$2.min.js"><\/script>')</script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/${3:1.7.2}/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-$3.min.js"><\/script>')</script>
   <script>
-    var _gaq=[['_setAccount','${3:UA-XXXXX-X}'],['_trackPageview']];
+    var _gaq=[['_setAccount','UA-${4:XXXXX}-${5:X}'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
