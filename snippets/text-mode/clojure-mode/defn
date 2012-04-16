@@ -1,6 +1,8 @@
-#name: defn
+# -*- mode: snippet -*-
+# name: defn
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-(defn ${1:name} ${2:
-  "${3:doc-string}"
-  }[${4:arg-list}]
+(defn ${1:name}
+  "$3"
+  [$4]
   $0)
