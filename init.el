@@ -234,6 +234,9 @@
 ;; (setq ac-auto-start 1)
 ;; (setq ac-dwim 1)
 (setq ac-ignore-case 1)
+;; Don't allow tab to cycle. It's irritating.
+(define-key ac-completing-map "\t" 'ac-complete)
+
 
 (add-to-list 'ac-modes 'shell-mode)
 (defun set-up-shell-mode-ac ()
