@@ -282,6 +282,19 @@
   (setq tab-width 2)
   )
 (add-hook 'css-mode-hook 'set-css-coding-style)
+(defun set-up-less-css-ac ()
+  (setq ac-sources '(
+                      ac-source-words-in-buffer
+                      ac-source-abbrev
+                      ac-source-symbols
+                      ac-source-variables
+                      ac-source-words-in-same-mode-buffers
+                      ac-source-yasnippet
+                      )))
+(add-hook 'css-mode-hook 'set-up-less-css-ac)
+(add-hook 'less-css-mode-hook 'set-up-less-css-ac)
+(add-to-list 'ac-modes 'less-css-mode)
+
 
 ;; Protobuf mode
 (require 'protobuf-mode)
