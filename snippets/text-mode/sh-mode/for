@@ -2,7 +2,7 @@
 # name: for
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-for $1 in $2
+for $1
 do
   $0
 done
