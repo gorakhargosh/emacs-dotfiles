@@ -3,8 +3,8 @@
 # key: lapl2
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-/*!
- * Copyright ${1:`(nth 5 (decode-time))`} ${2:Google Inc}.
+/*${1:!}
+ * Copyright ${2:`(nth 5 (decode-time))`} ${3:Google Inc}.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Author: ${3:`user-mail-address`} (${4:`(user-full-name)`})
+ * Author: ${4:`user-mail-address`} (${5:`(user-full-name)`})
  */
 
 $0
