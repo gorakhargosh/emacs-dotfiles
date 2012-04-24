@@ -2,5 +2,4 @@
 # name: goog.provide(...);
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-goog.provide("$1");
-$0
+goog.provide("$1");$0

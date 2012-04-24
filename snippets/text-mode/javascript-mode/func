@@ -2,6 +2,9 @@
 # key: func
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
+/**
+ * ${3:Short documentation.}
+ */
 ${1:name} = function ($2){
   $0
 };

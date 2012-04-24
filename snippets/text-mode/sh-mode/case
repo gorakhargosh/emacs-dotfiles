@@ -3,5 +3,5 @@
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
 case $1 in
-  $2) $0 ;;
+  $2 ) $0 ;;
 esac
