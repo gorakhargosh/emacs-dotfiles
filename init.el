@@ -472,6 +472,8 @@
  '(lambda ()
     (setq indent-tabs-mode nil)))
 
+;; Soy-mode for closure templates.
+(require 'soy-mode)
 
 ;; RFC specific
 (require 'irfc)
