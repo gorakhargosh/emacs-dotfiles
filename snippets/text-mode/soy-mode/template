@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: {template ...}{/template}
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# --
+/**
+ * $2
+ */
+{template ${1:name}}
+$0
+{/template}

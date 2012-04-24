@@ -470,10 +470,19 @@
 (add-hook
  'html-mode-hook
  '(lambda ()
+    (set (make-local-variable 'sgml-basic-offset) 2)
     (setq indent-tabs-mode nil)))
 
 ;; Soy-mode for closure templates.
 (require 'soy-mode)
+(add-hook
+ 'soy-mode-hook
+ '(lambda ()
+    ;; Don't use tabs when indenting in HTML mode.
+    (setq indent-tabs-mode nil)
+    (setq tab-width 2)
+    (set (make-local-variable 'sgml-basic-offset) 2)
+    (yas-minor-mode t)))
 
 ;; RFC specific
 (require 'irfc)
