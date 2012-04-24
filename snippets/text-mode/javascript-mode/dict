@@ -3,5 +3,5 @@
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
 {
-  $1: $0
+  $1: $0,
 }
