@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: <!doctype html>
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# key: doctype
+# --
+<!doctype html>$0
