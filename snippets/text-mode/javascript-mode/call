@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: function_call(...);
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# binding: C-c C-c C-c
+# --
+$1($0);
