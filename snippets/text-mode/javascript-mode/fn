@@ -1,5 +1,4 @@
 # name: Anonymous function (lambda)
-# key: fn
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
 function ($1){
