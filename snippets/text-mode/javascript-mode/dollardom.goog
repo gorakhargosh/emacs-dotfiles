@@ -1,0 +1,5 @@
+# name: goog.dom.createDom(...)
+# key: $dom
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# --
+goog.dom.createDom($1)$0

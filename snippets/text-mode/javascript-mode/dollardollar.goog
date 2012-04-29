@@ -1,0 +1,5 @@
+# name: goog.dom.getElementsByTagNameAndClass(...)
+# key: $$
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# --
+goog.dom.getElementsByTagNameAndClass($1)$0
