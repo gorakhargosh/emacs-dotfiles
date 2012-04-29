@@ -1,5 +1,0 @@
-# name: $(...)
-# key: $
-# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
-# --
-$($1)$0
