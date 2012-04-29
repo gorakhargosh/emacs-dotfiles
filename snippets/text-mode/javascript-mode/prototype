@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: prototype definition.
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# --
+${1:object}.prototype.${2:attribute} = function ($3) {
+  $0
+};
