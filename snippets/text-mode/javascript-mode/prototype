@@ -2,6 +2,9 @@
 # name: prototype definition.
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-${1:object}.prototype.${2:attribute} = function ($3) {
+/**
+ * $1
+ */
+${2:object}.prototype.${3:attribute} = function ($4) {
   $0
 };

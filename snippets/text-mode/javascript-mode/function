@@ -2,8 +2,8 @@
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
 /**
- * ${3:Documentation.}
+ * ${1:Documentation.}
  */
-function ${1:name}($2){
+function ${2:name}($3){
   $0
 }
