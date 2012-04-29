@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: goog.exportSymbol(...);
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# --
+goog.exportSymbol('${1:publicPath}', $1);$0
