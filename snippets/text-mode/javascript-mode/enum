@@ -1,9 +1,11 @@
 # -*- mode: snippet -*-
-# name: var ... = ...;
+# name: goog enum
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
 /**
  * ${1:Short description.}
- * @type {$2}
+ * @enum {${2:number}}
  */
-var $3 = $0;
+${3:name} = {
+   $4: $0
+};

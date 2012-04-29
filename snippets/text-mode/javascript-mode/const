@@ -1,9 +1,10 @@
 # -*- mode: snippet -*-
-# name: var ... = ...;
+# name: /** @const */ var ... = ...;
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
 /**
  * ${1:Short description.}
+ * @const
  * @type {$2}
  */
 var $3 = $0;
