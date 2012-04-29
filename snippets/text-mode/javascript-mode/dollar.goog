@@ -1,5 +1,5 @@
-# name: goog.dom.getElement(...)
+# name: goog.dom.query(...)
 # key: $
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-goog.dom.getElement($1)$0
+goog.dom.query($1)$0
