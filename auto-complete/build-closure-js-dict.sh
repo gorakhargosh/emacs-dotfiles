@@ -25,6 +25,6 @@ else
 fi
 
 cat ~/.emacs.d/vendor/auto-complete/dict/javascript-mode > ~/.emacs.d/auto-complete/dict/javascript-mode
-git grep -h -e "^goog\.[A-Za-z_0-9.]*.*\=[ ]" --and --not -e ".*prototype.*" --and --not -e "^goog\.[A-za-z_0-9.]*_.*\=[ ]" --and --not -e "[\[\']" | sed  "s/^\(goog\.[A-Za-z_0-9.]*.*\)=.*/\1/g" | sort -u >> ~/.emacs.d/auto-complete/dict/javascript-mode
+git grep -h -e "^goog\.[A-Za-z_0-9.]*.*\=[ ]" --and --not -e ".*prototype.*" --and --not -e "^goog\.[A-za-z_0-9.]*_.*\=[ ]" --and --not -e "[\[\']" | sed  "s/^\(goog\.[A-Za-z_0-9.]*.*\)[ ]=.*/\1/g" | sort -u >> ~/.emacs.d/auto-complete/dict/javascript-mode
 
 popd
