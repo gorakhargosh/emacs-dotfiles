@@ -85,6 +85,7 @@
 (setq config-dir (file-name-directory (or (buffer-file-name) load-file-name)))
 (setq vendor-library-dir (expand-file-name (concat config-dir "vendor")))
 (setq auto-complete-dict-dir (concat vendor-library-dir "auto-complete/dict"))
+(setq auto-complete-dict-dir-local (concat config-dir "auto-complete/dict"))
 (setq snippets-dir (concat config-dir "snippets"))
 
 
@@ -238,6 +239,7 @@
 ;; Automatic completion and suggestions.
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories auto-complete-dict-dir)
+(add-to-list 'ac-dictionary-directories auto-complete-dict-dir-local)
 (ac-config-default)
 (global-auto-complete-mode t)
 ;; (setq ac-auto-start 1)
@@ -245,7 +247,7 @@
 (setq ac-ignore-case 1)
 ;; Don't allow tab to cycle. It's irritating.
 (define-key ac-completing-map "\t" 'ac-complete)
-
+(setq-default ac-sources (add-to-list 'ac-sources 'ac-source-dictionary))
 
 (add-to-list 'ac-modes 'shell-mode)
 (defun set-up-shell-mode-ac ()
