@@ -2,4 +2,4 @@
 # name: goog.exportProperty(...);
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-goog.exportProperty(${1:object}, "${2:propertyName}", $1.$2);$0
+goog.exportProperty(${1:object}, '${2:propertyName}', $1.$2);$0
