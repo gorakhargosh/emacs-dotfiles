@@ -1,3 +1,4 @@
+# -*- mode: snippet -*-
 # name: goog.dom.createDom(...)
 # key: $dom
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
