@@ -1,6 +1,7 @@
 # -*- mode: snippet -*-
 # name: JSDoc module documentation
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# key: #file
 # --
 /**
  * @fileoverview ${1:Short description.}
