@@ -1,6 +1,5 @@
 # -*- mode: snippet -*-
 # name: Apache License version 2.0 header
-# key: lapl2
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
 /*${1:!}
@@ -17,8 +16,6 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- *
- * Author: ${4:`user-mail-address`} (${5:`(user-full-name)`})
  */
 
 $0

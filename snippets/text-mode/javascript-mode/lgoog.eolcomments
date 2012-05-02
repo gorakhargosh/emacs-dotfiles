@@ -2,8 +2,6 @@
 # name: Google License header
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-/*${1:!}
- * Copyright ${2:`(nth 5 (decode-time))`} ${3:Google Inc}. ${4:All Rights Reserved.}
- */
+// Copyright ${1:`(nth 5 (decode-time))`} ${2:Google Inc}. ${3:All Rights Reserved.}
 
 $0
