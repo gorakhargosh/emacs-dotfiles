@@ -402,6 +402,12 @@
 (autoload 'python-pylint "python-pylint")
 (autoload 'pylint "python-pylint")
 
+(defun set-up-python-ac ()
+  "Sets up python-mode autocomplete"
+  (set (make-local-variable 'ac-sources)
+       (append ac-sources '(ac-source-yasnippet))))
+(add-hook 'python-mode-hook 'set-up-python-ac)
+
 ;; (defun onsave-run-pylint ()
 ;;   "Runs pylint on the code as soon as the Python file is saved."
 ;;   (add-hook 'after-save-hook 'python-pylint))
