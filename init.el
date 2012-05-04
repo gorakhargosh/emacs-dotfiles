@@ -247,7 +247,9 @@
 (setq ac-ignore-case 1)
 ;; Don't allow tab to cycle. It's irritating.
 (define-key ac-completing-map "\t" 'ac-complete)
-(setq-default ac-sources (add-to-list 'ac-sources 'ac-source-dictionary))
+(setq-default ac-sources
+              (add-to-list 'ac-sources
+                           'ac-source-dictionary))
 
 (add-to-list 'ac-modes 'shell-mode)
 (defun set-up-shell-mode-ac ()
@@ -267,6 +269,8 @@
 (yas/initialize)
 (yas/load-directory snippets-dir)
 (yas/global-mode 1)
+;; Add yasnippets to autocompletion sources.
+(add-to-list 'ac-sources 'ac-source-yasnippet)
 
 (require 'ac-slime)
 (add-hook 'slime-mode-hook 'set-up-slime-ac)
