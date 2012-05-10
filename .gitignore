@@ -9,6 +9,7 @@ swank/
 places
 url/
 *.google.com.el
+*.google.com.el.disabled
 ac-comphist.el
 ac-comphist.dat
 anything-c-adaptive-history
@@ -18,4 +19,3 @@ tramp
 session.*
 abbrev_defs
 .emacs.desktop
-
