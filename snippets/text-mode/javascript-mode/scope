@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: goog.scope(...);
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# --
+goog.scope(function() {
+  $0
+}); // goog.scope
