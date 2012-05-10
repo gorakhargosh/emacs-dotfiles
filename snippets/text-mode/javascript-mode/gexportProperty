@@ -3,4 +3,4 @@
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # key: gep
 # --
-goog.exportProperty(${1:object}, '${2:propertyName}', $1.$2);$0
+goog.exportProperty($1, '$2', $1.$2);$0

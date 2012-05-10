@@ -3,4 +3,4 @@
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # key: ges
 # --
-goog.exportSymbol('${1:publicPath}', $1);$0
+goog.exportSymbol('$1', $1);$0
