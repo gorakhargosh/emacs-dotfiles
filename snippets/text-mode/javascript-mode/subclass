@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: Google Closure Subclass
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# --
+goog.provide('$1');
+
+/**
+ * ${5:Short description.}
+ * @constructor
+ * @extends {$3}
+ */
+${1:ClassName} = function ($4){
+  $3.call(this);
+  $0
+};
+goog.inherits($1, $3);
