@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name: ... = ...;
+# name: Comment
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
-# key: =;
+# key: ###
 # --
-$1 = $0;
+/** $1 */$0
