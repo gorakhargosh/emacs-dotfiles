@@ -10,7 +10,7 @@ goog.provide('$1');
  * @extends {$3}
  */
 ${1:ClassName} = function ($4){
-  $3.call(this);
+  goog.base(this);
   $0
 };
 goog.inherits($1, $3);
