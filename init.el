@@ -284,21 +284,25 @@
 (require 'markdown-mode)
 (require 'gyp-mode)
 
+;; Shell script mode.
+(defun set-sh-mode-coding-style ()
+  (setq sh-basic-offset 2
+        sh-indentation 2))
+(add-hook 'sh-mode-hook 'set-sh-mode-coding-style)
+
 ;; CSS and LESS.
 (require 'less-css-mode)
 (defun set-less-css-coding-style ()
-  (setq less-css-indent-level 2)
-  (setq indent-tabs-mode nil)
-  (setq require-final-newline 't)
-  (setq tab-width 2)
-)
+  (setq less-css-indent-level 2
+        indent-tabs-mode nil
+        require-final-newline 't
+        tab-width 2))
 (add-hook 'less-css-mode-hook 'set-less-css-coding-style)
 (defun set-css-coding-style ()
-  (setq css-indent-offset 2)
-  (setq indent-tabs-mode nil)
-  (setq require-final-newline 't)
-  (setq tab-width 2)
-  )
+  (setq css-indent-offset 2
+        indent-tabs-mode nil
+        require-final-newline 't
+        tab-width 2))
 (add-hook 'css-mode-hook 'set-css-coding-style)
 (defun set-up-less-css-ac ()
   (setq ac-sources '(
@@ -380,13 +384,12 @@
 
 ;; Defines the python coding style.
 (defun set-python-coding-style ()
-  (setq indent-tabs-mode nil)
-  (setq require-final-newline 't)
-  (setq tab-width 2)
-  (setq python-indent-offset 2)
-  (setq python-indent 2)
-  (setq py-indent-offset 2)
-  )
+  (setq indent-tabs-mode nil
+        require-final-newline 't
+        tab-width 2
+        python-indent-offset 2
+        python-indent 2
+        py-indent-offset 2))
 (setq auto-mode-alist
       (append '(
                 ("\\wscript$" . python-mode))
@@ -500,8 +503,8 @@
  'soy-mode-hook
  '(lambda ()
     ;; Don't use tabs when indenting in HTML mode.
-    (setq indent-tabs-mode nil)
-    (setq tab-width 2)
+    (setq indent-tabs-mode nil
+          tab-width 2)
     (set (make-local-variable 'sgml-basic-offset) 2)
     (yas-minor-mode t)))
 
