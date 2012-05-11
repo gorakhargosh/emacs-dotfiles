@@ -6,6 +6,7 @@ goog.provide('$3');
 
 /**
  * ${1:Short description.}
+ *
  * @enum {${2:number}}
  */
 ${3:name} = {
