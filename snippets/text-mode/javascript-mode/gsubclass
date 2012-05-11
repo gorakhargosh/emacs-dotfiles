@@ -5,12 +5,12 @@
 goog.provide('$1');
 
 /**
- * ${5:Short description.}
+ * ${6:Short description.}
  * @constructor
  * @extends {$3}
  */
 ${1:ClassName} = function ($4){
-  goog.base(this);
+  goog.base(this$5);
   $0
 };
 goog.inherits($1, $3);
