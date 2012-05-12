@@ -17,6 +17,12 @@
 :author: ${7:`user-mail-address`} (${8:`(user-full-name)`})
 """
 
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import with_statement
+
+
 __author__ = "$7 ($8)"
+
 
 $0
