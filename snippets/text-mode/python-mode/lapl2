@@ -28,6 +28,10 @@
 :author: ${6:`user-mail-address`} (${7:`(user-full-name)`})
 """
 
+from __future__ import absolute_import
+
+
 __author__ = "$6 ($7)"
+
 
 $0
