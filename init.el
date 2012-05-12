@@ -110,13 +110,18 @@
 
 
 ;;; A quick & ugly PATH solution to Emacs on Mac OSX
-(if (system-type-is-darwin-p)
-    (setenv "PATH" (concat "/usr/local/bin:/usr/bin" (getenv "PATH"))))
-(setenv "PATH" (concat (concat config-dir "bin") (getenv "PATH")))
+;; (if (system-type-is-darwin-p)
+;;     (setenv "PATH" (concat "/usr/local/bin:/usr/bin" (getenv "PATH"))))
+;; (setenv "PATH" (concat (concat config-dir "bin") (getenv "PATH")))
 
 ;;; Load up environment configuration for Mac OS X
+;; (if (system-type-is-darwin-p)
+;;     (require 'config-osx-environment))
+
 (if (system-type-is-darwin-p)
-    (require 'config-osx-environment))
+    (progn
+      (add-to-list 'exec-path "/usr/local/bin")
+      (add-to-list 'exec-path "/usr/local/sbin")))
 
 
 ;; ***************************************************************************
