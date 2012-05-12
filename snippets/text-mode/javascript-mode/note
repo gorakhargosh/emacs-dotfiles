@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: Todo line.
+# name: Note line.
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-// TODO(${1:`user-login-name`}): $0
+// NOTE(${1:`user-login-name`}): $0
