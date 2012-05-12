@@ -543,6 +543,8 @@
 ;; (require 'wrap-region)
 ;; (wrap-region-global-mode t)
 
+(require 'findr)
+
 (require 'helm-config)
 (helm-mode 1)
 
