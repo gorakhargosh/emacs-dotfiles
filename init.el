@@ -70,6 +70,7 @@
                            ;;js2-mode
                            protobuf-mode
                            yaml-mode
+                           find-things-fast
                            ))
 
 (dolist (p default-packages)
@@ -193,8 +194,16 @@
         (make-directory dir)))))
 
 
+;; To be able to find files in a project quickly.
+;; Bindings are defined in config-bindings.
+(require 'find-things-fast)
+
+
+;; Simultaneously edit regions of buffers. Also enable narrowing
+;; which is useful with iedit.
 (require 'iedit)
 (put 'narrow-to-region 'disabled nil)
+
 
 ;; Key bindings and editing.
 (require 'move-text)
@@ -543,6 +552,8 @@
 ;; (require 'wrap-region)
 ;; (wrap-region-global-mode t)
 
+;; Find and replace using regular expressions in an entire directory
+;; of files.
 (require 'findr)
 
 (require 'helm-config)
