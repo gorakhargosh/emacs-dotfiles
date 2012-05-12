@@ -153,15 +153,15 @@
     (add-hook 'after-save-hook 'byte-compile-user-init-file t t)))
 
 (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
-(add-hook 'emacs-lisp-mode-hook 'onuserinitsave-auto-recompile)
+;;(add-hook 'emacs-lisp-mode-hook 'onuserinitsave-auto-recompile)
 (add-hook 'kill-emacs-hook 'byte-compile-user-init-file t t)
 
 (setq save-abbrevs nil)
 
-
-(when (not (file-exists-p (concat user-init-file ".elc")))
-  (byte-compile-file user-init-file)
-  (byte-compile-dotfiles))
+;; Automatic compilation of Emacs lisp modules.
+;; (when (not (file-exists-p (concat user-init-file ".elc")))
+;;   (byte-compile-file user-init-file)
+;;   (byte-compile-dotfiles))
 
 
 ;; Automatically compile all modules on startup.
