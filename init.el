@@ -118,10 +118,21 @@
 ;; (if (system-type-is-darwin-p)
 ;;     (require 'config-osx-environment))
 
-(if (system-type-is-darwin-p)
-    (progn
-      (add-to-list 'exec-path "/usr/local/bin")
-      (add-to-list 'exec-path "/usr/local/sbin")))
+;; (if (system-type-is-darwin-p)
+;;     (progn
+;;       (add-to-list 'exec-path "/usr/bin")
+;;       (add-to-list 'exec-path "/usr/sbin")
+;;       (add-to-list 'exec-path "/usr/local/bin")
+;;       (add-to-list 'exec-path "/usr/local/sbin")))
+
+;; (add-to-list 'exec-path "~/bin")
+;; (add-to-list 'exec-path "~/Applications/bin")
+
+;; ;; read in PATH from .bashrc
+;; (if (system-type-is-darwin-p)
+;;     (if (not (getenv "TERM_PROGRAM"))
+;;        (setenv "PATH"
+;;                (shell-command-to-string "source $HOME/.profile && printf $PATH"))))
 
 
 ;; ***************************************************************************
