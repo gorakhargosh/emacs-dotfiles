@@ -515,6 +515,7 @@
 ;; zencoding
 (require 'zencoding-mode)
 (add-hook 'sgml-mode-hook 'zencoding-mode)
+(add-hook 'sgml-mode-hook 'orgtbl-mode)
 
 ;; Don't use tabs when indenting in HTML mode.
 (add-hook
