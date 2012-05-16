@@ -417,7 +417,8 @@
         py-indent-offset 2))
 (setq auto-mode-alist
       (append '(
-                ("\\wscript$" . python-mode))
+                ("\\wscript$" . python-mode)
+                ("\\BUILD$" . python-mode))
               auto-mode-alist))
 (add-hook 'rst-adjust-hook 'rst-toc-update)
 (add-hook 'python-mode-hook 'set-python-coding-style)
