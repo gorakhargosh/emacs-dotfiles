@@ -418,6 +418,8 @@
 (setq auto-mode-alist
       (append '(
                 ("\\wscript$" . python-mode)
+                ("\\SConstruct" . python-mode)
+                ("\\SConscript" . python-mode)
                 ("\\BUILD$" . python-mode))
               auto-mode-alist))
 (add-hook 'rst-adjust-hook 'rst-toc-update)
