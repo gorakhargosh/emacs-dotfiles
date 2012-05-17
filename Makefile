@@ -1,8 +1,14 @@
 RM = rm -rf
+EMACS = emacs -Q -batch
 
-.PHONY: all clean distclean push help
+ELISP_LOAD_PATH := -L .
+# find vendor -type d -not \( -path '*.git*' -or -path '*.svn*' -or -path '*.hg*' \) -print0
+ELISP_SOURCES := $(wildcard *.el)
+ELISP_TARGET := $(ELISP_SOURCES:.el=.elc)
 
-all:
+.PHONY: all build clean distclean push help
+
+all: clean build
 
 help:
 	@echo "Possible targets:"
@@ -18,6 +24,14 @@ push-google:
 push-github:
 	@echo "Pushing repository to remote:origin [github.com]"
 	@git push origin master
+
+
+%.elc: %.el
+	$(EMACS) $(ELISP_LOAD_PATH) -f batch-byte-compile $<
+
+$(ELISP_TARGET): $(ELISP_SOURCES)
+
+build: $(ELISP_TARGET)
 
 clean:
 	@$(RM) *.elc *~
