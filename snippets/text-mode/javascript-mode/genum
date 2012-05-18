@@ -4,6 +4,8 @@
 # --
 goog.provide('$3');
 
+
+
 /**
  * ${1:Short description.}
  *
@@ -12,3 +14,9 @@ goog.provide('$3');
 ${3:name} = {
    $4: $0
 };
+
+
+/** @type {Array.<$3>} */
+$3.values = [
+  $3.$4
+];
