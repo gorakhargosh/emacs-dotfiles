@@ -133,6 +133,7 @@
 
   ;; Find things fast.
   (global-set-key '[f5] 'ftf-find-file)
+  ;; (global-set-key '[f5] 'helm-find-files)
   (global-set-key '[f6] 'ftf-grepsource)
   ;;(global-set-key '[f4] 'ftf-gdb)
   ;;(global-set-key '[f5] 'ftf-compile)

@@ -417,7 +417,10 @@
         py-indent-offset 2))
 (setq auto-mode-alist
       (append '(
-                ("\\wscript$" . python-mode))
+                ("\\wscript$" . python-mode)
+                ("\\SConstruct" . python-mode)
+                ("\\SConscript" . python-mode)
+                ("\\BUILD$" . python-mode))
               auto-mode-alist))
 (add-hook 'rst-adjust-hook 'rst-toc-update)
 (add-hook 'python-mode-hook 'set-python-coding-style)
@@ -514,6 +517,7 @@
 ;; zencoding
 (require 'zencoding-mode)
 (add-hook 'sgml-mode-hook 'zencoding-mode)
+(add-hook 'sgml-mode-hook 'orgtbl-mode)
 
 ;; Don't use tabs when indenting in HTML mode.
 (add-hook
