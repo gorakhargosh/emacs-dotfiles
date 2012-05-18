@@ -2,21 +2,21 @@
 # name: goog enum
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-goog.provide('$3');
+goog.provide('$1');
 
 
 
 /**
- * ${1:Short description.}
+ * ${3:Short description.}
  *
  * @enum {${2:number}}
  */
-${3:name} = {
+${1:name} = {
    $4: $0
 };
 
 
-/** @type {Array.<$3>} */
-$3.values = [
-  $3.$4
+/** @type {Array.<$1>} */
+$1.values = [
+  $1.$4
 ];
