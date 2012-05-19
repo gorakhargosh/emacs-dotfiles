@@ -186,6 +186,10 @@
 ;; on Mac OS X.
 ;; (byte-compile-dotfiles)
 
+;; Make the mouse wheel scroll progressive.
+;;(setq mouse-wheel-progressive-speed nil)
+(setq mouse-wheel-scroll-amount '(5 ((shift) . 1) ((control) . nil)))
+
 ;; Enable the menu bar.
 (menu-bar-mode t)
 
