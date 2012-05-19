@@ -6,6 +6,11 @@
 (require 'markdown-mode)
 (require 'gyp-mode)
 
+;; Slime autocomplete.
+(require 'ac-slime)
+(add-hook 'slime-mode-hook 'set-up-slime-ac)
+(add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
+
 ;; Shell script mode.
 (defun set-sh-mode-coding-style ()
   (setq sh-basic-offset 2

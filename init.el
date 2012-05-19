@@ -207,6 +207,17 @@
 ;; Automatically remove trailing whitespace.
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;; Enables mouse scrolling when using Emacs in the terminal.
+(unless window-system
+  (xterm-mouse-mode 1)
+  (global-set-key [mouse-4] '(lambda ()
+                               (interactive)
+                               (scroll-down 1)))
+  (global-set-key [mouse-5] '(lambda ()
+                               (interactive)
+                               (scroll-up 1)))
+  )
+
 ;; Advise find-file to transparently create necessary directories.
 (defadvice find-file (before make-directory-maybe (filename &optional wildcards) activate)
   "Create parent directory if not exists while visiting file."
@@ -233,18 +244,6 @@
 (require 'config-defuns)
 (require 'config-bindings)
 
-;; Enables mouse scrolling when using Emacs in the terminal.
-(unless window-system
-  (xterm-mouse-mode 1)
-  (global-set-key [mouse-4] '(lambda ()
-                               (interactive)
-                               (scroll-down 1)))
-  (global-set-key [mouse-5] '(lambda ()
-                               (interactive)
-                               (scroll-up 1)))
-  )
-
-
 ;; https://github.com/bbatsov/emacs-prelude/commit/d26924894b31d5dc3a8b2813719579baccc2b433
 (when (system-type-is-darwin-p)
   (defun copy-from-osx ()
@@ -262,10 +261,6 @@
 
 ;; Loads a color theme.
 ;;(load-theme 'wombat t)
-
-
-;; ********************************************************************************
-;; Editing and programming-specific stuff.
 
 ;; Automatically pair pairable symbols like (), '', "", [], <>, etc.
 (require 'autopair)
@@ -310,18 +305,13 @@
 ;; Add yasnippets to autocompletion sources.
 (add-to-list 'ac-sources 'ac-source-yasnippet)
 
-(require 'ac-slime)
-(add-hook 'slime-mode-hook 'set-up-slime-ac)
-(add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
-
-
+;; Load programming-specific stuff.
 (require 'config-programming)
 
-
 ;; RFC specific
-(require 'irfc)
-(setq irfc-directory "~/.emacs.d/rfc")
-(setq irfc-assoc-mode t)
+;; (require 'irfc)
+;; (setq irfc-directory "~/.emacs.d/rfc")
+;; (setq irfc-assoc-mode t)
 
 (require 'nav)
 ;;(nav)
@@ -355,7 +345,7 @@
 
 ;; Find and replace using regular expressions in an entire directory
 ;; of files.
-(require 'findr)
+;;(require 'findr)
 
 (require 'helm-config)
 (helm-mode 1)
