@@ -137,6 +137,9 @@
   (global-set-key '[f6] 'ftf-grepsource)
   ;;(global-set-key '[f4] 'ftf-gdb)
   ;;(global-set-key '[f5] 'ftf-compile)
+
+  ;; Toggle between camel-case and underscores.
+  (global-set-key (kbd "M-_") 'toggle-identifier-naming-style)
   )
 
 (provide 'config-bindings)
