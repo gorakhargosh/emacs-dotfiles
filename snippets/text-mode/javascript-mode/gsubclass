@@ -12,7 +12,7 @@ goog.provide('$1');
  * @constructor
  * @extends {$3}
  */
-${1:ClassName} = function ($4){
+${1:ClassName} = function($4) {
   goog.base(this$5);
   $0
 };

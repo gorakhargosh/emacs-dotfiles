@@ -3,6 +3,6 @@
 # contributor: David Miller <david@deadpansincerity.com>
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-if (${1:condition}){
+if (${1:condition}) {
   $0
 }
