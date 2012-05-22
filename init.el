@@ -71,6 +71,7 @@
                            protobuf-mode
                            yaml-mode
                            find-things-fast
+                           fill-column-indicator
                            ))
 
 (dolist (p default-packages)
@@ -326,6 +327,12 @@
 (add-hook 'python-mode-hook 'highlight-indentation)
 (add-hook 'coffee-mode-hook 'highlight-indentation)
 (add-hook 'html-mode-hook 'highlight-indentation)
+
+;; Fill column indicator
+(require 'fill-column-indicator)
+(define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
+(global-fci-mode 1)
+(setq-default fill-column 80)
 
 ;; Ack searches for code.
 ;; (add-to-list 'load-path "/path/to/ack-and-a-half")
