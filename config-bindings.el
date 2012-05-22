@@ -141,7 +141,8 @@
   ;; Toggle between camel-case and underscores.
   (global-set-key (kbd "M-_") 'toggle-identifier-naming-style)
 
-  (global-set-key (kbd "M-\"") 'paredit-doublequote)
+  ;;(global-set-key (kbd "M-\"") 'paredit-doublequote)
+  ;;(global-set-key (kbd "M-'") 'paredit-singlequote)
   )
 
 (provide 'config-bindings)

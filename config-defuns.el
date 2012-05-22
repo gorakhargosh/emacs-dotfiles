@@ -270,6 +270,33 @@ e.g. `HelloWorldString'."
                        t nil))
       (widen))))
 
+
+(defun paredit-singlequote (&optional n)
+  "Insert a pair of single-quotes.
+With a prefix argument N, wrap the following N S-expressions in
+  single-quotes, escaping intermediate characters if necessary.
+If the region is active, `transient-mark-mode' is enabled, and the
+  region's start and end fall in the same parenthesis depth, insert a
+  pair of single-quotes around the region, again escaping intermediate
+  characters if necessary.
+Inside a comment, insert a literal single-quote.
+At the end of a string, move past the closing single-quote.
+In the middle of a string, insert a backslash-escaped single-quote.
+If in a character literal, do nothing.  This prevents accidentally
+  changing a what was in the character literal to become a meaningful
+  delimiter unintentionally."
+  (interactive "P")
+  (cond ((paredit-in-string-p)
+         (if (eq (cdr (paredit-string-start+end-points))
+                 (point))
+             (forward-char)             ; We're on the closing quote.
+             (insert ?\\ ?\' )))
+        ((paredit-in-comment-p)
+         (insert ?\' ))
+        ((not (paredit-in-char-p))
+         (paredit-insert-pair n ?\' ?\' 'paredit-forward-for-quote))))
+
+
 (provide 'config-defuns)
 
 ;;; config-defuns.el ends here
