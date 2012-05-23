@@ -1,4 +1,4 @@
-#name : if __name__ == '__main__': ...
+#name : if __name__ == "__main__": ...
 # --
-if __name__ == '__main__':
+if __name__ == "__main__":
     $0
