@@ -219,6 +219,9 @@
                                (scroll-up 1)))
   )
 
+;; Save and restore sessions.
+(desktop-save-mode 1)
+
 ;; Advise find-file to transparently create necessary directories.
 (defadvice find-file (before make-directory-maybe (filename &optional wildcards) activate)
   "Create parent directory if not exists while visiting file."
@@ -329,9 +332,9 @@
 (add-hook 'html-mode-hook 'highlight-indentation)
 
 ;; Fill column indicator
-(require 'fill-column-indicator)
-(define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
-(global-fci-mode 1)
+;; (require 'fill-column-indicator)
+;; (define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
+;; (global-fci-mode 1)
 (setq-default fill-column 80)
 
 ;; Ack searches for code.
