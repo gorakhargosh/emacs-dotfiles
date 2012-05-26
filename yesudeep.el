@@ -7,6 +7,9 @@
 ;;(set-face-attribute 'default nil :family "Monaco" :height 100)
 ;;(set-face-attribute 'default nil :family "Consolas" :height 140)
 
+;; I like 70 as the margin width.
+(setq-default fill-column 70)
+
 ;; IRC Settings.
 (setq erc-autojoin-channels-alist
       '(("freenode.net" "#appengine" "#python" "#emacs" "#pypy" "#clojure" "##linux-india")))

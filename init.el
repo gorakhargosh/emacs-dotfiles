@@ -231,6 +231,7 @@
 ;; To be able to find files in a project quickly.
 ;; Bindings are defined in config-bindings.
 (require 'find-things-fast)
+;;(require 'find-file-in-project)
 
 
 ;; Simultaneously edit regions of buffers. Also enable narrowing
@@ -329,9 +330,9 @@
 (add-hook 'html-mode-hook 'highlight-indentation)
 
 ;; Fill column indicator
-(require 'fill-column-indicator)
-(define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
-(global-fci-mode 1)
+;; (require 'fill-column-indicator)
+;; (define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
+;; (global-fci-mode 1)
 (setq-default fill-column 80)
 
 ;; Ack searches for code.
