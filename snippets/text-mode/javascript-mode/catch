@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
-# name: try { ... }
+# name: catch (err) { ... }
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-try {
+catch (${1:err}) {
   $0
 }

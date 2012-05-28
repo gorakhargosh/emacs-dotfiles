@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
-# name: try { ... }
+# name: finally { ... }
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-try {
+finally {
   $0
 }
