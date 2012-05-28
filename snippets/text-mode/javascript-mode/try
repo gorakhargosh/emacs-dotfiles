@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: try { ... } catch (err) { ... }
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# --
+try {
+  $0
+} catch (${1:err}) {
+
+}
