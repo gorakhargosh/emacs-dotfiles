@@ -1,0 +1,59 @@
+# -*- mode: snippet -*-
+# name: Google Closure Event Handler composite.
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# --
+goog.provide('$1.$2');
+
+goog.require('goog.Disposable');
+goog.require('goog.events');
+goog.require('goog.events.EventHandler');
+
+
+
+goog.scope(function() {
+var _ = ${1:namespace};
+
+
+
+/**
+ * Handles a collection of events for an event target.
+ *
+ * @param {!${4:EventTarget}} $3 An object that
+ *     derives from {@code goog.events.EventTarget} as it is used
+ *     as the target to listen for events from.
+ * @constructor
+ * @extends {goog.Disposable}
+ */
+_.${2:CustomEventHandler} = function(${3:eventTarget}) {
+  goog.base(this);
+
+  /**
+   * @type {!goog.events.EventHandler}
+   * @protected
+   */
+  this.handler = new goog.events.EventHandler(this);
+
+  // Listen to events from the event target.
+  this.handler.listen($3, '${5:eventString}', this.${6:onEvent}_);
+};
+goog.inherits($2, goog.Disposable);
+
+
+/**
+ * @param {!goog.events.Event} e
+ * @private
+ */
+_.$2.prototype.$6_ = function(e) {
+  $0
+};
+
+
+/**
+ * @override
+ */
+_.$2.prototype.disposeInternal = function() {
+  _.$2.superClass_.disposeInternal.call(this);
+  this.handler.dispose();
+};
+
+});  // goog.scope
