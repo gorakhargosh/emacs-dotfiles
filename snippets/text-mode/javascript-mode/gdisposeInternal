@@ -11,6 +11,10 @@ ${1:classpath}.prototype.disposeInternal = function() {
 
   $0
   // (1) Dispose of all goog.Disposable objects owned by this class.
+  // IMPORTANT: DONT dispose goog.Disposable objects NOT owned by this
+  // class. An object is owned by this class if this class created it.
+  // An object passed to this class that was created by another class
+  // should NOT be disposed here.
   // goog.dispose(this.someDisposable);
 
   // (2) Remove listeners added by this class.
