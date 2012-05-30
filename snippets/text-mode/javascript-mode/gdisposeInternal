@@ -18,6 +18,8 @@ ${1:classpath}.prototype.disposeInternal = function() {
   // goog.dispose(this.someDisposable);
 
   // (2) Remove listeners added by this class.
+  // Ideally, you would use an EventHandler class that removes the
+  // need to manually dispose event listeners like this.
   // this.container.removeEventListener('mouseover',
   //                                    this.eventListener,
   //                                    false);
