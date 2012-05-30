@@ -10,7 +10,8 @@ goog.require('goog.events.Event');
 
 
 goog.scope(function() {
-var _ = ${1:namespace};
+
+var _ = ${1:namespace$(downcase yas/text)};
 
 
 

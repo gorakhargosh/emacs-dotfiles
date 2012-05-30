@@ -12,7 +12,8 @@ goog.require('goog.events.EventHandler');
 
 
 goog.scope(function() {
-var _ = ${1:namespace};
+
+var _ = ${1:namespace$(downcase yas/text)};
 
 
 
