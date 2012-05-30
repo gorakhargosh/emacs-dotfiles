@@ -1,5 +1,6 @@
 # -*- mode: snippet -*-
 # name: Google Closure Event Handler composite.
+# expand-env: ((yas/indent-line 'fixed))
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
 goog.provide('$1.$2');
