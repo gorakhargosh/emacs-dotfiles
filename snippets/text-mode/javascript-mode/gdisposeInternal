@@ -10,7 +10,7 @@ ${1:classpath}.prototype.disposeInternal = function() {
   $1.superClass_.disposeInternal.call(this);
 
   $0
-  // (1) Dispose of all Disposable objects owned by this class.
+  // (1) Dispose of all goog.Disposable objects owned by this class.
   // goog.dispose(this.someDisposable);
 
   // (2) Remove listeners added by this class.
