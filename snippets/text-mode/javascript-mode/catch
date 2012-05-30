@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
-# name: goog.scope(function(){ ... });
+# name: catch (err) { ... }
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-goog.scope(function() {
-$0
-});  // goog.scope
+catch (${1:err}) {
+  $0
+}

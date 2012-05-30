@@ -31,3 +31,6 @@
 [submodule "vendor/emacs-color-theme-solarized"]
 	path = vendor/emacs-color-theme-solarized
 	url = git://github.com/sellout/emacs-color-theme-solarized.git
+[submodule "vendor/fill-column-indicator"]
+	path = vendor/fill-column-indicator
+	url = git://github.com/alpaker/Fill-Column-Indicator.git

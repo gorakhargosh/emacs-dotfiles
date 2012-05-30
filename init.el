@@ -219,6 +219,9 @@
                                (scroll-up 1)))
   )
 
+;; Save and restore sessions.
+(desktop-save-mode 1)
+
 ;; Advise find-file to transparently create necessary directories.
 (defadvice find-file (before make-directory-maybe (filename &optional wildcards) activate)
   "Create parent directory if not exists while visiting file."

@@ -2,6 +2,6 @@
 # name: else if (...) { ... }
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-else if (${1:condition}){
+else if (${1:condition}) {
   $0
 }

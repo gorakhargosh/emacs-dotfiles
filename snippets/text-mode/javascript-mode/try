@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
-# name: goog.scope(function(){ ... });
+# name: try { ... }
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-goog.scope(function() {
-$0
-});  // goog.scope
+try {
+  $0
+}
