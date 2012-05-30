@@ -16,9 +16,9 @@ var _ = ${1:namespace};
 
 
 /**
- * Handles a collection of events for an event target.
+ * ${6:Handles a collection of events for an event target.}
  *
- * @param {!${4:EventTarget}} $3 An object that
+ * @param {!${5:goog.events.EventTarget}} $3 An object that
  *     derives from {@code goog.events.EventTarget} as it is used
  *     as the target to listen for events from.
  * @constructor
@@ -34,7 +34,7 @@ _.${2:CustomEventHandler} = function(${3:eventTarget}) {
   this.handler = new goog.events.EventHandler(this);
 
   // Listen to events from the event target.
-  this.handler.listen($3, '${5:eventString}', this.${6:onEvent}_);
+  this.handler.listen($3, '${4:event}', this.on${4:$(capitalize yas/text)}_);
 };
 goog.inherits($2, goog.Disposable);
 
@@ -43,7 +43,7 @@ goog.inherits($2, goog.Disposable);
  * @param {!goog.events.Event} e
  * @private
  */
-_.$2.prototype.$6_ = function(e) {
+_.$2.prototype.on${4:$(capitalize yas/text)}_ = function(e) {
   $0
 };
 
