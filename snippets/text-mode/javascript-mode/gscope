@@ -3,5 +3,5 @@
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
 goog.scope(function() {
-  $0
-}); // goog.scope
+$0
+});  // goog.scope
