@@ -1,5 +1,6 @@
 # -*- mode: snippet -*-
 # name: implements disposeInternal()
+# expand-env: ((yas/indent-line 'fixed))
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
 /**
@@ -8,6 +9,7 @@
 ${1:classpath}.prototype.disposeInternal = function() {
   $1.superClass_.disposeInternal.call(this);
 
+  $0
   // (1) Dispose of all Disposable objects owned by this class.
   // goog.dispose(this.someDisposable);
 
