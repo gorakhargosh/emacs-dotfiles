@@ -2,7 +2,7 @@
 # name: Google Closure Event subclass.
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-goog.provide('$1.$2Event');
+goog.provide('$1.$2');
 
 goog.require('goog.events.Event');
 
@@ -21,7 +21,7 @@ var _ = ${1:namespace};
  * @constructor
  * @extends {goog.events.Event}
  */
-_.${2:Custom}Event = function(${3:eventTarget}, ${4:property}) {
+_.${2:CustomEvent} = function(${3:eventTarget}, ${4:property}) {
   goog.base(this, $1.EventType.${2:$(upcase yas/text)}, $3);
 
   /**
@@ -34,7 +34,7 @@ _.${2:Custom}Event = function(${3:eventTarget}, ${4:property}) {
 
   $0
 };
-goog.inherits($2Event, goog.events.Event);
+goog.inherits($2, goog.events.Event);
 
 
 /** @return {$5} */
