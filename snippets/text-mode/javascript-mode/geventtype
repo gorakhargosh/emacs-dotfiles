@@ -8,11 +8,7 @@ goog.require('goog.events');
 
 
 
-/**
- * Events for {@code $1}.
- *
- * @enum {string}
- */
+/** @enum {string} */
 ${1:namespace}.EventType = {
    ${2:$(upcase yas/text)}: goog.events.getUniqueId('$2')$0
 };
