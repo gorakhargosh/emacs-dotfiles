@@ -1,19 +1,29 @@
 # -*- mode: snippet -*-
 # name: Google Closure Subclass
+# expand-env: ((yas/indent-line 'fixed))
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-goog.provide('$1');
+goog.provide('$1.$2');
+
+
+
+goog.scope(function() {
+
+var _ = ${1:namespace$(downcase yas/text)};
 
 
 
 /**
- * ${6:Short description.}
+ * ${5:Short description of the event.}
  *
  * @constructor
  * @extends {$3}
  */
-${1:ClassName} = function($4) {
-  goog.base(this$5);
+_.${2:ClassName} = function($4) {
+  goog.base(this);
+
   $0
 };
-goog.inherits($1, $3);
+goog.inherits(_.$2, ${3:ParentClass});
+
+});  // goog.scope
