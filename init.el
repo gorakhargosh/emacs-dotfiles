@@ -71,8 +71,9 @@
                            protobuf-mode
                            yaml-mode
                            find-things-fast
-                           fill-column-indicator
                            ))
+;; fill-column-indicator
+
 
 (dolist (p default-packages)
   (when (not (package-installed-p p))
@@ -220,7 +221,7 @@
   )
 
 ;; Save and restore sessions.
-(desktop-save-mode 1)
+;;(desktop-save-mode 1)
 
 ;; Advise find-file to transparently create necessary directories.
 (defadvice find-file (before make-directory-maybe (filename &optional wildcards) activate)
