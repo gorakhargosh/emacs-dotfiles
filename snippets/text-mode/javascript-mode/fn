@@ -1,5 +1,6 @@
 # -*- mode: snippet -*-
 # name: Anonymous function (lambda)
+# expand-env: ((yas/indent-line 'fixed))
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
 function($1) {
