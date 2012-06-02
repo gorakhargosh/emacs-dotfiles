@@ -55,7 +55,7 @@ _.$2.prototype.on${4:$(capitalize yas/text)}_ = function(e) {
  */
 _.$2.prototype.disposeInternal = function() {
   _.$2.superClass_.disposeInternal.call(this);
-  this.handler.dispose();
+  goog.dispose(this.handler);
 };
 
 });  // goog.scope

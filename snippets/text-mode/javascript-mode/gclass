@@ -11,12 +11,14 @@ goog.scope(function() {
 
 var ${3:shortname} = $1;
 
+
+
 /**
- * ${4:Short description.}
+ * ${5:Short description of the class.}
  *
  * @constructor
  */
-$1.$2 = function($3) {
+$3.$2 = function($4) {
   $0
 };
 
