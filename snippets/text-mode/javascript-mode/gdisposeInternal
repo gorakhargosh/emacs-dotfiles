@@ -3,9 +3,7 @@
 # expand-env: ((yas/indent-line 'fixed))
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-/**
- * @override
- */
+/** @override */
 ${1:classpath}.prototype.disposeInternal = function() {
   $1.superClass_.disposeInternal.call(this);
 

@@ -3,4 +3,5 @@
 # key: #override
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-/** @override */$0
+/** @override */
+$0
