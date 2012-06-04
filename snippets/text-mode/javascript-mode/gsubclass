@@ -3,27 +3,28 @@
 # expand-env: ((yas/indent-line 'fixed))
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-goog.provide('$1.$2');
+goog.provide('${1:namespace}.${2:ClassName}');
+
+goog.require('$4');
 
 
 
 goog.scope(function() {
 
-var _ = ${1:namespace$(downcase yas/text)};
+var ${3:shortname} = $1;
 
 
 
 /**
- * ${5:Short description of the event.}
+ * ${7:Short description.}
  *
  * @constructor
- * @extends {$3}
+ * @extends {$4}
  */
-_.${2:ClassName} = function($4) {
-  goog.base(this);
-
+$3.$2 = function($5) {
+  goog.base(this$6);
   $0
 };
-goog.inherits(_.$2, ${3:ParentClass});
+goog.inherits($1, ${4:});
 
 });  // goog.scope

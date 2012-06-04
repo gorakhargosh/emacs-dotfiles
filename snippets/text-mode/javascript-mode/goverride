@@ -1,8 +1,7 @@
 # -*- mode: snippet -*-
-# name: else { ... }
-# key: else
+# name: Google @override.
+# key: #override
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-else {
-  $0
-}
+/** @override */
+$0

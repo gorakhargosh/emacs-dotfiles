@@ -3,22 +3,22 @@
 # expand-env: ((yas/indent-line 'fixed))
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-goog.provide('$1.$2');
+goog.provide('${1:namespace}.${2:ClassName}');
 
 
 
 goog.scope(function() {
 
-var _ = ${1:namespace$(downcase yas/text)};
+var ${3:shortname} = $1;
 
 
 
 /**
- * ${4:Short description of the class.}
+ * ${5:Short description of the class.}
  *
  * @constructor
  */
-_.${2:ClassName} = function($3) {
+$3.$2 = function($4) {
   $0
 };
 
