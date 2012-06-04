@@ -1,0 +1,23 @@
+# -*- mode: snippet -*-
+# name: Google Getter/Setter Property.
+# expand-env: ((yas/indent-line 'fixed))
+# contributor: Yesudeep Mangalapilly <yesudeep@google.com>
+# --
+/**
+ * @param {*=} opt_val Default value if none is found.
+ * @return {$3}
+ */
+$1.prototype.get${2:$(upcase-initials yas/text)} = function(opt_val) {
+  return this.get('$2', opt_val);
+};
+
+
+/**
+ * @param {${3:type}} The value to set for the attribute.
+ * @param {boolean=} opt_silent true if change events
+ *     should not be fired; false otherwise.
+ */
+${1:namespace}.prototype.set${2:$(upcase-initials yas/text)} = function(${2:property}, opt_silent) {
+  this.set('$2', $2, opt_silent);
+};
+$0
