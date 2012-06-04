@@ -13,7 +13,8 @@ $1.prototype.get${2:$(upcase-initials yas/text)} = function(opt_val) {
 
 
 /**
- * @param {${3:type}} The value to set for the attribute.
+ * @param {${3:type}} $2 The value to set for the
+ *     attribute.
  * @param {boolean=} opt_silent true if change events
  *     should not be fired; false otherwise.
  */
