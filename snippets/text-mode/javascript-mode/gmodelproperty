@@ -1,11 +1,11 @@
 # -*- mode: snippet -*-
-# name: Google Getter/Setter Property.
+# name: Google Model Getter/Setter attribute.
 # expand-env: ((yas/indent-line 'fixed))
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
 /**
  * @param {*=} opt_val Default value if none is found.
- * @return {$3}
+ * @return {$3} ${4:The value for this attribute.}
  */
 $1.prototype.get${2:$(upcase-initials yas/text)} = function(opt_val) {
   return this.get('$2', opt_val);
@@ -17,7 +17,7 @@ $1.prototype.get${2:$(upcase-initials yas/text)} = function(opt_val) {
  * @param {boolean=} opt_silent true if change events
  *     should not be fired; false otherwise.
  */
-${1:namespace}.prototype.set${2:$(upcase-initials yas/text)} = function(${2:property}, opt_silent) {
+${1:namespace}.prototype.set${2:$(upcase-initials yas/text)} = function(${2:attribute}, opt_silent) {
   this.set('$2', $2, opt_silent);
 };
 $0
