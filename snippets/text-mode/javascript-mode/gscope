@@ -1,5 +1,6 @@
 # -*- mode: snippet -*-
 # name: goog.scope(function(){ ... });
+# expand-env: ((yas/indent-line 'fixed))
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
 goog.scope(function() {
