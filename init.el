@@ -339,9 +339,13 @@
 ;; (global-fci-mode 1)
 (setq-default fill-column 75)
 
-;; Use whitespace mode.
+;; Use whitespace mode. This is awesomeness.
 (require 'whitespace)
 (global-whitespace-mode t)
+(setq whitespace-style
+      '(face empty indentation lines-tail tabs trailing))
+(setq whitespace-action
+      '(auto-clean warn-read-only))
 
 ;; Ack searches for code.
 ;; (add-to-list 'load-path "/path/to/ack-and-a-half")
