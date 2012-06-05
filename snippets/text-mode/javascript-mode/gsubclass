@@ -11,7 +11,7 @@ goog.require('$4');
 
 goog.scope(function() {
 
-var ${3:shortname} = $1;
+var ${3:ns} = $1;
 
 
 

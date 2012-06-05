@@ -3,7 +3,7 @@
 # expand-env: ((yas/indent-line 'fixed))
 # contributor: Yesudeep Mangalapilly <yesudeep@google.com>
 # --
-goog.provide('$1.$2');
+goog.provide('${1:namespace$(downcase yas/text)}.${2:CustomEventHandler}');
 
 goog.require('goog.Disposable');
 goog.require('goog.events');
@@ -13,20 +13,20 @@ goog.require('goog.events.EventHandler');
 
 goog.scope(function() {
 
-var _ = ${1:namespace$(downcase yas/text)};
+var ${3:ns} = $1;
 
 
 
 /**
- * ${6:Handles a collection of events for an event target.}
+ * ${7:Handles a collection of events for an event target.}
  *
- * @param {!${5:goog.events.EventTarget}} $3 An object that
+ * @param {!${6:goog.events.EventTarget}} $4 An object that
  *     derives from {@code goog.events.EventTarget} as it is used
  *     as the target to listen for events from.
  * @constructor
  * @extends {goog.Disposable}
  */
-_.${2:CustomEventHandler} = function(${3:eventTarget}) {
+$3.$2 = function(${4:eventTarget}) {
   goog.base(this);
 
   /**
@@ -36,7 +36,7 @@ _.${2:CustomEventHandler} = function(${3:eventTarget}) {
   this.handler = new goog.events.EventHandler(this);
 
   // Listen to events from the event target.
-  this.handler.listen($3, '${4:event}', this.on${4:$(capitalize yas/text)}_);
+  this.handler.listen($4, '${5:event}', this.on${5:$(upcase-initials yas/text)}_);
 };
 goog.inherits($2, goog.Disposable);
 
@@ -45,7 +45,7 @@ goog.inherits($2, goog.Disposable);
  * @param {!goog.events.Event} e
  * @private
  */
-_.$2.prototype.on${4:$(capitalize yas/text)}_ = function(e) {
+$3.$2.prototype.on${5:$(capitalize yas/text)}_ = function(e) {
   $0
 };
 
@@ -53,8 +53,8 @@ _.$2.prototype.on${4:$(capitalize yas/text)}_ = function(e) {
 /**
  * @override
  */
-_.$2.prototype.disposeInternal = function() {
-  _.$2.superClass_.disposeInternal.call(this);
+$3.$2.prototype.disposeInternal = function() {
+  $3.$2.superClass_.disposeInternal.call(this);
   goog.dispose(this.handler);
 };
 
