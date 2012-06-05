@@ -34,7 +34,8 @@ $(ELISP_TARGET): $(ELISP_SOURCES)
 build: $(ELISP_TARGET)
 
 clean:
-	@$(RM) *.elc *~
+	find . -iname '*.elc' -print0 | xargs -0 rm
+	#@$(RM) *.elc *~
 
 distclean: clean
 	@$(RM) elpa/ backups/ auto-save-list/ eshell/ swank/ url/ ac-comphist.dat

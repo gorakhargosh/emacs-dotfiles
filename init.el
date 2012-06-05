@@ -54,7 +54,7 @@
                            starter-kit
                            starter-kit-bindings
                            starter-kit-eshell
-                           starter-kit-js
+;;                           starter-kit-js
                            starter-kit-lisp
                            yasnippet
                            yasnippet-bundle
@@ -334,10 +334,10 @@
 (add-hook 'html-mode-hook 'highlight-indentation)
 
 ;; Fill column indicator
-;; (require 'fill-column-indicator)
-;; (define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
-;; (global-fci-mode 1)
-(setq-default fill-column 80)
+(require 'fill-column-indicator)
+(define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
+(global-fci-mode 1)
+(setq-default fill-column 70)
 
 ;; Ack searches for code.
 ;; (add-to-list 'load-path "/path/to/ack-and-a-half")
