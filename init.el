@@ -38,7 +38,7 @@
 
 (require 'package)
 (add-to-list 'package-archives
-	     '("marmalade" . "http://marmalade-repo.org/packages/") t)
+             '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (package-initialize)
 
 ;; Automatically install these packages if they aren't present.
@@ -343,9 +343,10 @@
 (require 'whitespace)
 (global-whitespace-mode t)
 (setq whitespace-style
-      '(face empty indentation lines-tail tabs trailing))
+      '(face empty indentation lines-tail newline tabs trailing))
 (setq whitespace-action
-      '(auto-clean warn-read-only))
+      '(auto-cleanup warn-read-only))
+
 
 ;; Ack searches for code.
 ;; (add-to-list 'load-path "/path/to/ack-and-a-half")
