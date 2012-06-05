@@ -78,8 +78,8 @@
   ;; Killing and yanking.
   (define-key global-map (kbd "<delete>") 'delete-char)
   (define-key global-map (kbd "M-<delete>") 'kill-word)
-  (global-set-key (kbd "C-k") 'kill-whole-line)
-  (global-set-key (kbd "C-S-<backspace>") 'kill-and-join-forward)
+  ;; (global-set-key (kbd "C-k") 'kill-whole-line)
+  ;; (global-set-key (kbd "C-S-<backspace>") 'kill-and-join-forward)
 
   ;; Line insertion
   ;;(global-set-key (kbd "C-S-<return>") 'insert-empty-line-above)
