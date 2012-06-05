@@ -334,10 +334,14 @@
 (add-hook 'html-mode-hook 'highlight-indentation)
 
 ;; Fill column indicator
-(require 'fill-column-indicator)
-(define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
-(global-fci-mode 1)
+;; (require 'fill-column-indicator)
+;; (define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
+;; (global-fci-mode 1)
 (setq-default fill-column 75)
+
+;; Use whitespace mode.
+(require 'whitespace)
+(global-whitespace-mode t)
 
 ;; Ack searches for code.
 ;; (add-to-list 'load-path "/path/to/ack-and-a-half")

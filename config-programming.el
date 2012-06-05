@@ -82,6 +82,8 @@
           ;; fixes problem with pretty function font-lock
           (define-key js-mode-map (kbd ",") 'self-insert-command)))
 
+;; (require 'js3-mode)
+
 ;; Breaks fill-column and continuation indent.
 ;; (font-lock-add-keywords
 ;;            'js-mode `(("\\(function *\\)("
