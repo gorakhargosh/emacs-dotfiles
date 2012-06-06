@@ -5,16 +5,15 @@
 # --
 /**
  * @param {$3=} opt_val Default value if none is found.
- * @return {$3} ${4:The value for this attribute.}
+ * @return {$3} $4
  */
 $1.prototype.get${2:$(upcase-initials yas/text)} = function(opt_val) {
-  return this.get('$2', opt_val);
+  return /** @type {$3} */ (this.get('$2', opt_val));
 };
 
 
 /**
- * @param {${3:type}} $2 The value to set for the
- *     attribute.
+ * @param {${3:type}} $2 ${4:The value for this attribute.}
  * @param {boolean=} opt_silent true if change events
  *     should not be fired; false otherwise.
  */
