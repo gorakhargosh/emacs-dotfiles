@@ -19,3 +19,4 @@ tramp
 session.*
 abbrev_defs
 .emacs.desktop
+/var/pcache/gh/gh-gist-api/gorakhargosh
