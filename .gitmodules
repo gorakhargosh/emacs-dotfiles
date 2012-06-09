@@ -34,3 +34,6 @@
 [submodule "vendor/js3-mode"]
 	path = vendor/js3-mode
 	url = git://github.com/thomblake/js3-mode.git
+[submodule "vendor/iedit"]
+	path = vendor/iedit
+	url = git://github.com/victorhge/iedit.git
