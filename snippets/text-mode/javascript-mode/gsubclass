@@ -25,6 +25,6 @@ $3.$2 = function($5) {
   goog.base(this$6);
   $0
 };
-goog.inherits($1, ${4:});
+goog.inherits($1.$2, ${4:});
 
 });  // goog.scope
