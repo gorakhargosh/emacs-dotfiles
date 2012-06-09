@@ -22,4 +22,5 @@ $3.$2 = function($4) {
   $0
 };
 
+
 });  // goog.scope
