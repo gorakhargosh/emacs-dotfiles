@@ -126,7 +126,7 @@
   (global-set-key (kbd "C-c M-S-<left>") 'hs-hide-all)
 
   ;; Magit
-  (global-set-key (kbd "C-c g") 'magit-status)
+  (global-set-key (kbd "C-x g") 'magit-status)
 
   ;; Reload init file.
   (global-set-key (kbd "C-.") 'reload-current-init-file)
