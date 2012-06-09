@@ -6,3 +6,8 @@ cd vendor/Pymacs && make && sudo python setup.py install
 sudo pip install pep8 pylint rlcompleter2 ipython
 cd $PWD
 echo "Run sudo aptitude install ack-grep on Ubuntu."
+
+# We need the locate database up and running on Mac OS X.
+if [ -f /System/Library/LaunchDaemons/com.apple.locate.plist ]; then
+  sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+fi
