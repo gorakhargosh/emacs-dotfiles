@@ -38,7 +38,7 @@ $3.$2 = function(${4:eventTarget}) {
   // Listen to events from the event target.
   this.handler.listen($4, '${5:event}', this.on${5:$(upcase-initials yas/text)}_);
 };
-goog.inherits($2, goog.Disposable);
+goog.inherits($3.$2, goog.Disposable);
 
 
 /**

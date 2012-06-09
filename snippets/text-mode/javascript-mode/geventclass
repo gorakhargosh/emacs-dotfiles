@@ -36,7 +36,7 @@ $3.$2 = function(${4:eventTarget}, ${5:property}) {
 
   $0
 };
-goog.inherits($2, goog.events.Event);
+goog.inherits($3.$2, goog.events.Event);
 
 
 /** @return {$6} */
