@@ -284,11 +284,15 @@
 ;; (setq ac-auto-start 1)
 ;; (setq ac-dwim 1)
 (setq ac-ignore-case 1)
+(setq ac-use-fuzzy t)
+(setq ac-fuzzy-enable t)
 ;; Don't allow tab to cycle. It's irritating.
 (define-key ac-completing-map "\t" 'ac-complete)
 (setq-default ac-sources
               (add-to-list 'ac-sources
                            'ac-source-dictionary))
+
+
 
 (add-to-list 'ac-modes 'shell-mode)
 (defun set-up-shell-mode-ac ()
