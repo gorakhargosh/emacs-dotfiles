@@ -37,3 +37,6 @@
 [submodule "vendor/iedit"]
 	path = vendor/iedit
 	url = git://github.com/victorhge/iedit.git
+[submodule "vendor/twittering-mode"]
+	path = vendor/twittering-mode
+	url = git://github.com/hayamiz/twittering-mode.git
