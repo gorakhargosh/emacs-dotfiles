@@ -10,6 +10,8 @@
 ;; I like 70 as the margin width.
 (setq-default fill-column 70)
 
+
+
 ;; IRC Settings.
 (setq erc-autojoin-channels-alist
       '(("freenode.net" "#appengine" "#python" "#emacs" "#pypy" "#clojure" "##linux-india")))
@@ -18,6 +20,14 @@
   "Connect to IRC"
   (interactive)
   (erc :server "irc.freenode.net" :port 6667 :nick "gorakhargosh"))
+
+
+;; Twitter settings
+;; Requires installing gnupg.
+;; See http://www.emacswiki.org/emacs/TwitteringMode
+;; On Max OS X, do `brew install gnupg`.
+;; (require 'twittering-mode)
+;; (setq twittering-use-master-password t)
 
 
 ;;; yesudeep.el ends here.
