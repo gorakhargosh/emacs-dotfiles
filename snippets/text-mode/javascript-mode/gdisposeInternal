@@ -23,11 +23,11 @@ ${1:classpath}.prototype.disposeInternal = function() {
   //                                    false);
 
   // (3) Remove references to COM objects.
-  // this.xhr_ = null;      // set nullables to null.
+  // this.xhr_ = null;       // set nullables to null.
 
   // (4) Remove references to DOM nodes, which are COM objects in IE.
-  // delete this.container; // delete non-nullables.
-  // this.label = null;     // set nullables to null.
+  // delete this.container;  // delete non-nullables.
+  // this.label = null;      // set nullables to null.
 
   // Don't forget to breathe!
 };
