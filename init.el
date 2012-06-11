@@ -283,7 +283,7 @@
 (global-auto-complete-mode t)
 ;; (setq ac-auto-start 1)
 ;; (setq ac-dwim 1)
-(setq ac-ignore-case 1)
+(setq ac-ignore-case t)
 (setq ac-use-fuzzy t)
 (setq ac-fuzzy-enable t)
 ;; Don't allow tab to cycle. It's irritating.
@@ -291,7 +291,6 @@
 (setq-default ac-sources
               (add-to-list 'ac-sources
                            'ac-source-dictionary))
-
 
 
 (add-to-list 'ac-modes 'shell-mode)
