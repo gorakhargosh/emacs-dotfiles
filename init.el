@@ -71,6 +71,8 @@
                            protobuf-mode
                            yaml-mode
                            find-things-fast
+                           closure-lint-mode
+                           closure-template-html-mode
                            ))
 ;; fill-column-indicator
 
@@ -268,6 +270,29 @@
 ;; Loads a color theme.
 ;;(load-theme 'wombat t)
 
+;;(set-frame-parameter (selected-frame) 'alpha '(<active> [<inactive>]))
+(set-frame-parameter (selected-frame) 'alpha '(85 50))
+(add-to-list 'default-frame-alist '(alpha 85 50))
+
+(eval-when-compile (require 'cl))
+(defun toggle-transparency ()
+  (interactive)
+  (if (/=
+       (cadr (frame-parameter nil 'alpha))
+       100)
+      (set-frame-parameter nil 'alpha '(100 100))
+    (set-frame-parameter nil 'alpha '(85 50))))
+(global-set-key (kbd "C-c t") 'toggle-transparency)
+
+;; Set transparency of emacs
+(defun transparency (value)
+  "Sets the transparency of the frame window. 0=transparent/100=opaque"
+  (interactive "nTransparency Value 0 - 100 opaque:")
+  (set-frame-parameter (selected-frame) 'alpha value))
+(transparency 100)
+
+
+
 ;; Automatically pair pairable symbols like (), '', "", [], <>, etc.
 (require 'autopair)
 (autopair-global-mode)
@@ -283,7 +308,7 @@
 (global-auto-complete-mode t)
 ;; (setq ac-auto-start 1)
 ;; (setq ac-dwim 1)
-(setq ac-ignore-case t)
+(setq ac-ignore-case 'smart)
 (setq ac-use-fuzzy t)
 (setq ac-fuzzy-enable t)
 ;; Don't allow tab to cycle. It's irritating.

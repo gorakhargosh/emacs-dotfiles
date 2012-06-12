@@ -5,6 +5,6 @@
 /**
  * $2
  */
-{template ${1:name}}
+{template .${1:name} private="$()"}
 $0
 {/template}

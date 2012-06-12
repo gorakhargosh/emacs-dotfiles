@@ -237,7 +237,7 @@
 ;; zencoding
 (require 'zencoding-mode)
 (add-hook 'sgml-mode-hook 'zencoding-mode)
-(add-hook 'sgml-mode-hook 'orgtbl-mode)
+;;(add-hook 'html-mode-hook 'orgtbl-mode)
 
 ;; Don't use tabs when indenting in HTML mode.
 (add-hook
@@ -247,15 +247,17 @@
     (setq indent-tabs-mode nil)))
 
 ;; Soy-mode for closure templates.
-(require 'soy-mode)
-(add-hook
- 'soy-mode-hook
- '(lambda ()
-    ;; Don't use tabs when indenting in HTML mode.
-    (setq indent-tabs-mode nil
-          tab-width 2)
-    (set (make-local-variable 'sgml-basic-offset) 2)
-    (yas-minor-mode t)))
+;; (require 'soy-mode)
+;; (add-hook
+;;  'soy-mode-hook
+;;  '(lambda ()
+;;     ;; Don't use tabs when indenting in HTML mode.
+;;     (setq indent-tabs-mode nil
+;;           tab-width 2)
+;;     (set (make-local-variable 'sgml-basic-offset) 2)
+;;     (yas-minor-mode t)))
 
+(require 'closure-lint-mode)
+(require 'closure-template-html-mode)
 
 (provide 'config-programming)
